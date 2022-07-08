@@ -1,0 +1,14 @@
+RewriteEngine On
+#RewriteRule ^(.*)/(.*)\.html index.php?ctrl=$1&act=$2 [L]
+
+RewriteRule ^(.+)_(.+)\.html index.php?ctrl=$1&act=$2 [NC,QSA,L]
+
+RewriteRule ^(.+)\+(.+)\.html index.php?ctrlw=$1&act=$2 [NC,QSA,L]
+
+RewriteRule ^(.+)\-(.+)\-(.+)\.html index.php?ctrl=$1&act=$2&id=$3 [NC,QSA,L]
+
+RewriteRule ^(.+)\.(.+)\.(.+)\.html index.php?ctrlw=$1&act=$2&id=$3 [NC,QSA,L]
+
+RewriteRule ^(.+)_(.+)\.xml sdata.php?ctrl=$1&act=$2 [NC,QSA,L]
+
+RewriteRule ^(.+)-(.+)-(.+)\.xml sdata.php?ctrl=$1&act=$2&id=$3 [NC,QSA,L]

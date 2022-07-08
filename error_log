@@ -1,0 +1,503 @@
+[23-Dec-2021 01:36:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php:19
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php(19): PDO->__construct('mysql:host=127....', 'root', 'root')
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/core/EntidadBase.php(11): Conectar->conexion()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php(6): EntidadBase->__construct()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/model/UsuariosModel.php(7): ModeloBase->__construct('usuarios')
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php(51): UsuariosModel->__construct()
+#5 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): UsuariosController->login()
+#6 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion(Object(UsuariosController), 'login')
+#7 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion(Object(UsuariosController))
+#8 in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php on line 19
+[23-Dec-2021 01:56:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php:19
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php(19): PDO->__construct('mysql:host=127....', 'root', 'root')
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/core/EntidadBase.php(11): Conectar->conexion()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php(6): EntidadBase->__construct()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/model/UsuariosModel.php(7): ModeloBase->__construct('usuarios')
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php(51): UsuariosModel->__construct()
+#5 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): UsuariosController->login()
+#6 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion(Object(UsuariosController), 'login')
+#7 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion(Object(UsuariosController))
+#8 in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php on line 19
+[23-Dec-2021 01:56:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php:19
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php(19): PDO->__construct('mysql:host=127....', 'root', 'root')
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/core/EntidadBase.php(11): Conectar->conexion()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php(6): EntidadBase->__construct()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/model/UsuariosModel.php(7): ModeloBase->__construct('usuarios')
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php(51): UsuariosModel->__construct()
+#5 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): UsuariosController->login()
+#6 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion(Object(UsuariosController), 'login')
+#7 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion(Object(UsuariosController))
+#8 in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php on line 19
+[23-Dec-2021 01:56:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php:19
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php(19): PDO->__construct('mysql:host=127....', 'root', 'root')
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/core/EntidadBase.php(11): Conectar->conexion()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php(6): EntidadBase->__construct()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/model/UsuariosModel.php(7): ModeloBase->__construct('usuarios')
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php(51): UsuariosModel->__construct()
+#5 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): UsuariosController->login()
+#6 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion(Object(UsuariosController), 'login')
+#7 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion(Object(UsuariosController))
+#8 in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php on line 19
+[23-Dec-2021 01:57:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php:19
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php(19): PDO->__construct('mysql:host=127....', 'root', 'root')
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/core/EntidadBase.php(11): Conectar->conexion()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php(6): EntidadBase->__construct()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/model/UsuariosModel.php(7): ModeloBase->__construct('usuarios')
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php(51): UsuariosModel->__construct()
+#5 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): UsuariosController->login()
+#6 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion(Object(UsuariosController), 'login')
+#7 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion(Object(UsuariosController))
+#8 in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php on line 19
+[23-Dec-2021 01:59:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php:19
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php(19): PDO->__construct('mysql:host=127....', 'root', 'root')
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/core/EntidadBase.php(11): Conectar->conexion()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php(6): EntidadBase->__construct()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/model/UsuariosModel.php(7): ModeloBase->__construct('usuarios')
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php(51): UsuariosModel->__construct()
+#5 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): UsuariosController->login()
+#6 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion(Object(UsuariosController), 'login')
+#7 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion(Object(UsuariosController))
+#8 in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php on line 19
+[23-Dec-2021 02:04:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'ecuajlfk_wp829'@'localhost' (using password: YES) in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php:19
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php(19): PDO->__construct('mysql:host=127....', 'ecuajlfk_wp829', 'GD8OP0IdzKD4')
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/core/EntidadBase.php(11): Conectar->conexion()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php(6): EntidadBase->__construct()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/model/UsuariosModel.php(7): ModeloBase->__construct('usuarios')
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php(51): UsuariosModel->__construct()
+#5 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): UsuariosController->login()
+#6 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion(Object(UsuariosController), 'login')
+#7 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion(Ob in /home/ecuajlfk/firmas.ecuafirmas.com/core/Conectar.php on line 19
+[23-Dec-2021 02:12:22 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[23-Dec-2021 15:25:40 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[27-Dec-2021 23:37:21 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 00:27:51 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 00:49:12 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 15:44:30 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 16:01:36 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 16:01:53 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 16:02:11 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 16:02:22 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: fecha_nacimiento in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 970
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: tipo_solicitud in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1032
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: contenedor in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1033
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: nombres in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1034
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: apellido1 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1035
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: apellido2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1036
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: tipodocumento in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1037
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: numerodocumento in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1038
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: ruc_personal in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1039
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: sexo in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1040
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: nacionalidad in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1042
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: telfCelular in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1043
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: telfCelular2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1044
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: telfFijo in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1045
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: eMail in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1046
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: empresa in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1047
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: ruc_empresa in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1048
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: cargo in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1049
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: motivo in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1050
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: unidad in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1051
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: provincia in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1052
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: ciudad in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1053
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: nombresRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1054
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: apellidosRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1055
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: tipodocumentoRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1056
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: numerodocumentoRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1057
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: vigenciafirma in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1058
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: direccion in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1059
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_cedulaFront in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1060
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_cedulaBack in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1061
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_selfie in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1062
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_copiaruc in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1063
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_nombramiento in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1064
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_nombramiento2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1065
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_constitucion in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1066
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_documentoRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1067
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_autreprelegal in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1068
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_adicional1 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1069
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_adicional2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1070
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_adicional3 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1071
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_adicional4 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1072
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: cm1 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1073
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: cm2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1074
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: cm3 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1075
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: cm4 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1076
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: cm5 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1077
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: cm6 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1078
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: factu in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1079
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: forma_pago in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1080
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: ruc_ced_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1081
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: nombres_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1082
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: correo_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1083
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: direccion_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1084
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: telef_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1085
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_ced_pass_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1086
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: f_ruc_ced_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1087
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: comentarios_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1088
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: nombre_partner in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1089
+[30-Dec-2021 16:25:48 UTC] PHP Notice:  Undefined index: servicio_express in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1090
+[30-Dec-2021 16:47:35 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 16:47:45 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 16:53:41 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 16:55:02 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 16:55:28 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 16:57:00 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 16:58:07 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:01:53 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:14:24 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:14:30 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:18:20 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:32:23 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:32:29 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:36:30 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:38:47 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:41:05 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 17:44:26 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[30-Dec-2021 18:18:32 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 18:22:33 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 18:31:05 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 18:35:17 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 18:46:54 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 19:39:34 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 20:42:23 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 22:43:22 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 22:43:24 UTC] PHP Notice:  Undefined index: user in /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php on line 52
+[30-Dec-2021 22:43:24 UTC] PHP Notice:  Undefined index: clave in /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php on line 52
+[30-Dec-2021 22:43:24 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[30-Dec-2021 23:44:56 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[31-Dec-2021 00:35:37 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[31-Dec-2021 13:59:52 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[31-Dec-2021 14:20:40 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: fecha_nacimiento in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 970
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: tipo_solicitud in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1032
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: contenedor in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1033
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: nombres in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1034
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: apellido1 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1035
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: apellido2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1036
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: tipodocumento in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1037
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: numerodocumento in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1038
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: ruc_personal in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1039
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: sexo in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1040
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: nacionalidad in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1042
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: telfCelular in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1043
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: telfCelular2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1044
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: telfFijo in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1045
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: eMail in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1046
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: empresa in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1047
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: ruc_empresa in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1048
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: cargo in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1049
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: motivo in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1050
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: unidad in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1051
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: provincia in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1052
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: ciudad in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1053
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: nombresRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1054
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: apellidosRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1055
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: tipodocumentoRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1056
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: numerodocumentoRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1057
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: vigenciafirma in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1058
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: direccion in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1059
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_cedulaFront in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1060
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_cedulaBack in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1061
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_selfie in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1062
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_copiaruc in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1063
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_nombramiento in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1064
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_nombramiento2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1065
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_constitucion in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1066
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_documentoRL in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1067
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_autreprelegal in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1068
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_adicional1 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1069
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_adicional2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1070
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_adicional3 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1071
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_adicional4 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1072
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: cm1 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1073
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: cm2 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1074
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: cm3 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1075
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: cm4 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1076
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: cm5 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1077
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: cm6 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1078
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: factu in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1079
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: forma_pago in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1080
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: ruc_ced_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1081
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: nombres_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1082
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: correo_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1083
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: direccion_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1084
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: telef_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1085
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_ced_pass_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1086
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: f_ruc_ced_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1087
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: comentarios_fact in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1088
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: nombre_partner in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1089
+[31-Dec-2021 14:22:32 UTC] PHP Notice:  Undefined index: servicio_express in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1090
+[31-Dec-2021 14:31:16 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[31-Dec-2021 14:31:23 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[31-Dec-2021 16:08:55 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[31-Dec-2021 18:00:37 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[31-Dec-2021 18:31:18 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 14:46:04 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 14:46:15 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 14:46:20 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 14:48:19 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 15:14:19 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 15:19:56 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 15:33:50 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 15:34:38 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 15:44:11 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 15:54:20 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 16:34:58 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 16:40:02 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 16:45:55 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 16:46:07 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 16:46:13 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 16:46:37 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 16:47:13 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 17:49:21 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 18:08:18 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 18:36:26 UTC] PHP Notice:  Undefined offset: 62 in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 1835
+[03-Jan-2022 18:46:33 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 19:48:31 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 20:35:31 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 20:35:37 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 20:35:44 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 20:35:48 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 21:17:20 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 21:17:24 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 21:17:34 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 21:17:46 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 21:17:52 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 21:18:37 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[03-Jan-2022 21:23:51 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[03-Jan-2022 22:31:56 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[04-Jan-2022 00:43:14 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[04-Jan-2022 02:11:33 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[04-Jan-2022 02:11:42 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 02:16:48 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 02:33:42 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:33:41 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:33:47 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:35:33 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:39:05 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:40:00 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:40:05 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:40:09 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:40:12 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:40:53 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:41:28 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:43:10 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[04-Jan-2022 03:43:13 UTC] PHP Notice:  Undefined index: user in /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php on line 52
+[04-Jan-2022 03:43:13 UTC] PHP Notice:  Undefined index: clave in /home/ecuajlfk/firmas.ecuafirmas.com/controller/UsuariosController.php on line 52
+[04-Jan-2022 03:43:13 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[04-Jan-2022 03:43:50 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:44:07 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:44:26 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:44:37 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:44:58 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:45:01 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:45:23 UTC] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:51:30 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 260
+[04-Jan-2022 03:51:30 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 260
+[04-Jan-2022 03:51:46 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[04-Jan-2022 03:52:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 260
+[04-Jan-2022 03:52:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 260
+[04-Jan-2022 03:52:01 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(260): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:52:39 UTC] PHP Notice:  Only variables should be passed by reference in /home/ecuajlfk/firmas.ecuafirmas.com/core/ModeloBase.php on line 12
+[04-Jan-2022 03:52:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 261
+[04-Jan-2022 03:52:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 261
+[04-Jan-2022 03:52:48 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(261): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:53:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 262
+[04-Jan-2022 03:53:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 262
+[04-Jan-2022 03:53:32 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(262): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:53:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 262
+[04-Jan-2022 03:53:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 262
+[04-Jan-2022 03:53:40 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(262): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:53:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 262
+[04-Jan-2022 03:53:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 262
+[04-Jan-2022 03:53:48 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(262): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:54:31 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 263
+[04-Jan-2022 03:54:31 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 263
+[04-Jan-2022 03:54:31 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(263): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 03:56:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 264
+[04-Jan-2022 03:56:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 264
+[04-Jan-2022 03:56:16 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(264): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:02:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 264
+[04-Jan-2022 04:02:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 264
+[04-Jan-2022 04:02:11 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(264): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:10:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 266
+[04-Jan-2022 04:10:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 266
+[04-Jan-2022 04:10:36 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(266): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:12:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 266
+[04-Jan-2022 04:12:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 266
+[04-Jan-2022 04:12:22 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(266): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:12:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 266
+[04-Jan-2022 04:12:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 266
+[04-Jan-2022 04:12:32 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(266): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:13:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 266
+[04-Jan-2022 04:13:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 266
+[04-Jan-2022 04:13:47 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(266): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:14:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:14:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:14:44 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(267): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:15:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:15:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:15:56 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(267): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:17:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:17:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:17:18 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(267): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:18:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:18:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:18:15 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(267): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:18:29 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:18:29 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:18:29 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(267): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
+[04-Jan-2022 04:19:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:19:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php on line 267
+[04-Jan-2022 04:19:13 UTC] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php:45
+Stack trace:
+#0 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorBase.php(23): require_once()
+#1 /home/ecuajlfk/firmas.ecuafirmas.com/controller/RegistrosController.php(267): ControladorBase->view()
+#2 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(19): RegistrosController->ListSoli()
+#3 /home/ecuajlfk/firmas.ecuafirmas.com/core/ControladorFrontal.func.php(24): cargarAccion()
+#4 /home/ecuajlfk/firmas.ecuafirmas.com/index.php(21): lanzarAccion()
+#5 {main}
+  thrown in /home/ecuajlfk/firmas.ecuafirmas.com/view/list_soli2_view.php on line 45
