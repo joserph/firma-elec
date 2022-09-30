@@ -130,32 +130,34 @@
             <tr>
                <th>Foto Cédula Frontal</th>
                <td>
-                  <img src="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>" id="cedulaFrontal" width="350"  alt="">
+                  <img src="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>" width="350"  alt="">
                   <hr>
-                  <?php
-                     $base64Img = $datos['f_cedulaFront'];
-                     // list(, $base64Img) = explode(';', $base64Img);
-                     // list(, $base64Img) = explode(',', $base64Img);
-                     $base64Img = base64_decode($base64Img);
-                     file_put_contents('test.jpg', $base64Img);
-                     echo "<a href='test.jpg' download>Descargar 1</a>"
-                  ?>
-                  <button onclick="descargarImgBase64(data = 'cedulaFrontal')">Descargar</button>
+                  <a download="<?php echo $datos['numerodocumento']; ?>_f_cedulaFront.jpg" class="btn btn-primary" href="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>">Descargar</a>
                </td>
             </tr>
             <tr>
                <th>Foto Cédula Posterior</th>
-               <td><img src="data:image/jpg;base64,<?php echo $datos['f_cedulaBack']; ?>" width="350"  alt=""></td>
+               <td>
+                  <img src="data:image/jpg;base64,<?php echo $datos['f_cedulaBack']; ?>" width="350"  alt="">
+                  <hr>
+                  <a download="<?php echo $datos['numerodocumento']; ?>_f_cedulaBack.jpg" class="btn btn-primary" href="data:image/jpg;base64,<?php echo $datos['f_cedulaBack']; ?>">Descargar</a>
+               </td>
             </tr>
             <tr>
                <th>Foto Tipo Selfie</th>
-               <td><img src="data:image/jpg;base64,<?php echo $datos['f_selfie']; ?>" width="350"  alt=""></td>
+               <td>
+                  <img src="data:image/jpg;base64,<?php echo $datos['f_selfie']; ?>" width="350"  alt="">
+                  <hr>
+                  <a download="<?php echo $datos['numerodocumento']; ?>_f_selfie.jpg" class="btn btn-primary" href="data:image/jpg;base64,<?php echo $datos['f_selfie']; ?>">Descargar</a>
+               </td>
             </tr>
             <tr>
                <th>Documento Adicional 1</th>
                <td>
                   <?php if($datos['f_adicional1']){ ?>
                      <embed src='data:application/pdf;base64,<?php echo $datos['f_adicional1']; ?>' width='80%' height="300" type='application/pdf'>
+                     <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_f_adicional1.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_adicional1']; ?>">Descargar</a>
                   <?php }else{ ?>
                      <p class="lead">No hay PDF guardado</p>
                   <?php } ?>
@@ -166,6 +168,8 @@
                <td>
                   <?php if($datos['f_copiaruc']){ ?>
                      <embed src='data:application/pdf;base64,<?php echo $datos['f_copiaruc']; ?>' width='80%' height="300" type='application/pdf'>
+                     <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_f_copiaruc.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_copiaruc']; ?>">Descargar</a>
                   <?php }else{ ?>
                      <p class="lead">No hay PDF guardado</p>
                   <?php } ?>
@@ -177,6 +181,8 @@
                   <?php if($datos['cm2']){ ?>
                      <video width="80%" height="300" controls>
                         <source src='data:video/mp4;base64,<?php echo $datos['cm2']; ?>' type='video/mp4'>
+                        <hr>
+                        <a download="<?php echo $datos['numerodocumento']; ?>_cm2.mp4" class="btn btn-primary" href="data:image/mp4;base64,<?php echo $datos['cm2']; ?>">Descargar</a>
                      </video>
                   <?php }else{ ?>
                      <p class="lead">No hay Video guardado</p>
@@ -264,58 +270,3 @@
    </div>
 </div>
   <!--FIN DE FORM DINAMICO!!-->
-<script>
-function descargarImgBase64(name){
-   let img_base_64 = document.getElementById(name).getAttribute('src');
-
-   urlToFile(img_base_64, name);
-   //console.log(img_base_64);
-    
-}
-let urlToFile = (url, name) => {
-   let arr = url.split(",")
-   //console.log(arr)
-   let mime = arr[0].replace('data:', '').replace(';base64', '')
-   let data = arr[1]
-   // let arrBuffer = base64ToArrayBuffer(data)
-   // let newBlob = new Blob([arrBuffer], {type: mime})
-
-   // let data_url = window.URL.createObjectURL(newBlob)
-
-   // var link = document.createElement('a');
-   // document.body.appendChildl(link);
-   // link.href = data_url;
-   // link.download = name;
-   // link.click();
-   // window.URL.revokeObjectURL(data_url);
-   // link.remove();
-
-   let dataStr = atob(data)
-   let n = dataStr.length
-   let dataArr = new Uint8Array(n)
-
-   while(n--)
-   {
-      dataArr[n] = dataStr.charCodeAt(n)
-   }
-   
-   let file = new File([dataArr], name + '.jpg', {type: mime})
-
-   let payload = new FormData()
-   let test = payload.append('file', file)
-   // let d = window.URL.createObjectURL(file)
-   // console.log(d)
-   console.log(test)
-}
-
-function base64ToArrayBuffer(base64) {
-    var binaryString = window.atob(base64);
-    var binaryLen = binaryString.length;
-    var bytes = new Uint8Array(binaryLen);
-    for (var i = 0; i < binaryLen; i++) {
-       var ascii = binaryString.charCodeAt(i);
-       bytes[i] = ascii;
-    }
-    return bytes;
- }
-</script>

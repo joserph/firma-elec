@@ -394,8 +394,17 @@ class RegistrosController extends ControladorBase{
         }
     }
 
+    public function verDescarga($base_64)
+    {
+        $base64Img = $base_64;
+        // list(, $base64Img) = explode(';', $base64Img);
+        // list(, $base64Img) = explode(',', $base64Img);
+        $base64Img = base64_decode($base64Img);
+        file_put_contents('test.jpg', $base64Img);
+        return "<a href='test.jpg' download>Descargar 1</a>";
+    }
     public function VerSoli(){
-        print_r('hola mundo');
+        
         $obj=new EntidadBase();
         $data=$obj->getById($_GET['id'],"solicitudes2","id_solicitud");
 
