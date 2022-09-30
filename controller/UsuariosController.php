@@ -13,8 +13,9 @@ class UsuariosController extends ControladorBase{
     public function Panel(){
 
        $obj=new EntidadBase();
+       //print_r($obj);
+       $data=$obj->getAllUsers("usuarios");
        
-       $data=$obj->getAll("usuarios");
        $this->view("listusuarios",array(
            "datos"=>$data
            ));

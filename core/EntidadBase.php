@@ -21,13 +21,32 @@ class EntidadBase{
     
     public function getAll($val){
         $this->table = $val;
-        $query = $this->db->prepare("SELECT * FROM $this->table");
+        $id_sol = 'id_solicitud';
+        $query = $this->db->prepare("SELECT * FROM $this->table ORDER BY $id_sol DESC");
+        
         $query->execute();
-
+        
         $resultSet = array();
         
         while($row = $query->fetch(PDO::FETCH_ASSOC)) {
            $resultSet[]=$row;
+           
+        }
+        return $resultSet;
+    }
+    
+    public function getAllUsers($val){
+        $this->table = $val;
+        $id_sol = 'id_usuario';
+        $query = $this->db->prepare("SELECT * FROM $this->table ORDER BY $id_sol DESC");
+        
+        $query->execute();
+        
+        $resultSet = array();
+        
+        while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+           $resultSet[]=$row;
+           
         }
         
         return $resultSet;

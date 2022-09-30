@@ -38,7 +38,7 @@
                            
                         </div>
                      </div>
-                     <div class="text-warning"><p>(<i class="fab fa-diaspora text-warning"></i>) <em>Campo Requerido</em></p></div>
+                     <div class="text-warning"><p>(<i class="fab fa-diaspora text-warning"></i>) <em>Campo Obligatorio</em></p></div>
                      <div class="row setup-content" id="step-1">
                         <!--<div class="col-md-12">-->
                            <input type="hidden" name="tipo_solicitud" class="form-control" value="2">
@@ -90,7 +90,12 @@
                                     <input type="text" value="<?php echo $datos['numerodocumento']; ?>" name="numerodocumento" id="numerodocumento" maxlength=13 onblur="validarDocumento('numerodocumento')" class="form-control" placeholder="0102698867" required>
                                  </div>
                               </div>
-
+                              <div class="form-group col-md-4" id="g_codigodactilar">
+                                 <div class="col-md-12">
+                                    <label for="nombre">Código Dactilar 
+                                    <input type="text" name="codigodactilar" id="codigodactilar" value="<?php echo $datos['codigodactilar']; ?>" maxlength=13 class="form-control" placeholder="EXXXXEXXXX">
+                                 </div>
+                              </div>
                               <div class="form-group col-md-4 ocultar" id="g_ruc_personal">
                                      <div class="col-md-12">
                                      <label for="nombre">RUC Personal <i class="fab fa-diaspora text-warning"></i></label>
@@ -510,13 +515,21 @@
                            </table>
                         </div>
                         <hr>
-                        <h2>Datos para la Factura Electrónica</h2>
+                        <h2>Datos para la Factura</h2>
                         <hr>
-                        <div class="alert alert-info alert-dismissible" role="alert">
-                           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                           <strong>En caso de Pago Online!</strong> Comunicarse con <a href="https://wa.me/593939860303?text=Me%20interesa%20hacer%20Pago%20Online" target="_blank" style="color: black;">093 986 0303</a> (Haz clic en el número para ir directo a Whatsapp).
+                        <div class="form-group col-md-12" id="g_factu">
+                           <div class="col-md-12">
+                           <label for="nombre">¿Desea su Factura Electrónica con los mismo datos ingresados?</label>
+                              <label class="radio-inline">
+                              <input type="radio" name="factu" class="con_factu" id="no_factu" onclick="factElec(0)" value="No" <?php if($datos['factu'] == "No") echo 'checked'; ?>> No
+                              </label>
+                              <label class="radio-inline">
+                              <input type="radio" name="factu" class="con_factu" id="si_factu" onclick="factElec(1)" value="Si" <?php if($datos['factu'] == "Si") echo 'checked'; ?>> Si
+                              </label>
+                           </div>
                         </div>
-                        <div class="form-group col-md-4" id="g_forma_pago">
+                        
+                        <!-- <div class="form-group col-md-4" id="g_forma_pago">
                            <div class="col-md-12">
                            <label for="nombre">Forma de Pago <i class="fab fa-diaspora text-warning"></i></label>
                            <select class="form-control" name="forma_pago" id="forma_pago">
@@ -525,14 +538,7 @@
                               <option value="Online" <?php if($datos['forma_pago'] == "Online") echo 'selected="selected"'; ?>>Pago ONLINE</option>
                            </select>
                            </div>
-                        </div>
-                        <div class="form-group col-md-6" id="g_nombre_partner">
-                           <div class="col-md-12">
-                           <label for="nombre">Código Partner</label>
-                           <input type="text" name="nombre_partner" value="<?php echo $datos['nombre_partner']; ?>" id="nombre_partner" class="form-control" maxlength=13 placeholder="Código Partner">
-                           </div>
-                        </div>
-
+                        </div> -->
                         <hr>
                         <div class="form-group col-md-6" id="g_cm5">
                            <div class="col-md-12">
@@ -559,20 +565,18 @@
                               <option value="Si" <?php if($datos['servicio_express'] == "Si") echo 'selected="selected"'; ?>>Si</option>
                               <option value="No" <?php if($datos['servicio_express'] == "No") echo 'selected="selected"'; ?>>No</option>
                            </select>
-                           <span id="error_servicio_express" class="help-block ocultar"><small>El campo es requerido</small></span>
+                           <span id="error_servicio_express" class="help-block ocultar"><small>El campo es obligatorio</small></span>
                            </div>
                         </div>
-                        <div class="form-group col-md-12" id="g_factu">
+                        <br>
+                        <hr>
+                        <div class="form-group col-md-8" id="g_nombre_partner">
                            <div class="col-md-12">
-                           <label for="nombre">¿Desea su Factura Electrónica con los mismo datos ingresados?</label>
-                              <label class="radio-inline">
-                              <input type="radio" name="factu" class="con_factu" id="no_factu" onclick="factElec(0)" value="No" <?php if($datos['factu'] == "No") echo 'checked'; ?>> No
-                              </label>
-                              <label class="radio-inline">
-                              <input type="radio" name="factu" class="con_factu" id="si_factu" onclick="factElec(1)" value="Si" <?php if($datos['factu'] == "Si") echo 'checked'; ?>> Si
-                              </label>
+                           <label for="nombre">Campo opcional Nombre y Apellido del Partner</label>
+                           <input type="text" name="nombre_partner" value="<?php echo $datos['nombre_partner']; ?>" id="nombre_partner" class="form-control" maxlength=13 placeholder="Nombre y Apellido del Partner">
                            </div>
                         </div>
+                        
                         <div class="form-group col-md-4" id="g_ruc_ced_fact">
                            <div class="col-md-12">
                            <label for="nombre">RUC / Cédula <i class="fab fa-diaspora text-warning"></i></label>
@@ -650,7 +654,7 @@
                            </div>
                         </div>
                         <div class="col-md-12">
-                           <p class="bg-success">¿Quieres ser Partner? Comunícate con nosotros al siguiente numero 0951234567</p>
+                           <p class="bg-success">¿Quieres ser Partner? Comunícate con nosotros a los siguientes números 0939860303 - 0982576150</p>
                         </div>
 
                         <div class="form-group col-md-11">

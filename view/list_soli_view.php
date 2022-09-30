@@ -49,6 +49,7 @@
                   <table class="table table-bordered table-condensed" id="list_persona_natural">
                      <thead> 
                         <tr>
+                           <th class="text-center">Fecha ingreso</th>
                            <th class="text-center">Documento</th><!--Estado-->
                            <th class="text-center">Nombres</th>
                            <th class="text-center">Apellidos</th>
@@ -72,6 +73,7 @@
                                  continue;
                               }
                               echo '<tr>';
+                              echo '<td >'. date('Y/m/d h:i:s', strtotime($datos[$i]['fecha_ing_firma'])).'</td>';
                               echo '<td >'. $datos[$i]['numerodocumento'].'</td>';
                               echo '<td>'. strtoupper($datos[$i]['nombres']) .'</td>';
                               echo '<td>'. strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) .'</td>';
@@ -136,6 +138,7 @@
                   <table class="table table-bordered" id="list-representante-legal">
                      <thead> 
                         <tr>
+                           <th class="text-center">Fecha ingreso</th>
                            <th class="text-center">Documento</th><!--Estado-->
                            <th class="text-center">Nombres</th>
                            <th class="text-center">Apellidos</th>
@@ -158,6 +161,7 @@
                                  continue;
                               }
                               echo '<tr>';
+                              echo '<td >'. date('Y/m/d h:i:s', strtotime($datos[$i]['fecha_ing_firma'])).'</td>';
                               echo '<td >'. $datos[$i]['numerodocumento'].'</td>';
                               echo '<td>'. strtoupper($datos[$i]['nombres']) .'</td>';
                               echo '<td>'. strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) .'</td>';
@@ -223,6 +227,7 @@
                   <table class="table table-bordered" id="list-miembro-empresa">
                      <thead> 
                         <tr>
+                           <th class="text-center">Fecha ingreso</th>
                            <th class="text-center">Documento</th><!--Estado-->
                            <th class="text-center">Nombres</th>
                            <th class="text-center">Apellidos</th>
@@ -245,6 +250,7 @@
                                  continue;
                               }
                               echo '<tr>';
+                              echo '<td >'. date('Y/m/d h:i:s', strtotime($datos[$i]['fecha_ing_firma'])).'</td>';
                               echo '<td >' . $datos[$i]['numerodocumento'].'</td>';
                               echo '<td>' . strtoupper($datos[$i]['nombres']) .'</td>';
                               echo '<td>' . strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) .'</td>';

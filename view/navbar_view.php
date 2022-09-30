@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="Usuarios_index.html">
-            <img alt="Brand" src="web/public/img/logo-firma-electronica-lb.png" width="80">
+            <img alt="Brand" src="web/public/img/logo-593-firmas-bl.jpg" width="80">
         </a>
     </div>
 

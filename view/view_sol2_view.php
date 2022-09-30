@@ -65,6 +65,10 @@
                <td><?php echo $datos['numerodocumento']; ?></td>
             </tr>
             <tr>
+               <th>Código Dactilar</th>
+               <td><?php echo $datos['codigodactilar']; ?></td>
+            </tr>
+            <tr>
                <th>RUC Personal</th>
                <td><?php echo $datos['ruc_personal']; ?></td>
             </tr>

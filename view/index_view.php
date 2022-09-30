@@ -9,7 +9,7 @@
 <div class="col-md-10">
 	<div class="panel panel-default" id="paneles-system">
 		<div class="panel-heading" id="title-panel-regform">
-                    <h3 class="panel-title"></h3><h3><img src="web/public/img/icon-firma-electronica.png" width="80" alt=""> Bienvenido al sistema de firma electrónica.</h3>
+                    <h3 class="panel-title"></h3><h3><img src="web/public/img/logo-593-firmas.png" width="80" alt=""> Bienvenido al sistema de firma electrónica.</h3>
               </div>
 		<div class="panel-body">
 	  <div class="panel-body">
@@ -63,7 +63,7 @@
 						</div>
 					</div>
 				</div>
-				<p><b>NOTA:</b> Registra correctamente la data antes de proceder a enviar.</p>
+				<p><b>NOTA:</b> Si necesitas atención personalizada escríbenos al <a href="https://wa.me/593999700866?text=Necesito%20atención%20personalizada" target="_blank"><i class="fab fa-whatsapp"></i> 099 970 0866</a></p>
 			</div>
 			
 	  	</div>

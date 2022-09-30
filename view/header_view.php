@@ -20,6 +20,7 @@
     <link rel="icon" type="image/x-icon" href="web/public/img/favicon.ico">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
+    
     <style>
         /* Switch button */
         .btn-default.btn-on.active{background-color: #5BB75B;color: white;}

@@ -90,9 +90,9 @@ const validarFormsFirma = (e) => {
       case "cm4":
          validateField(expresiones.direccion, e.target, 'cm4');
       break;
-      case "forma_pago":
-         validateSelect(e.target, 'forma_pago');
-      break;
+      // case "forma_pago":
+      //    validateSelect(e.target, 'forma_pago');
+      // break;
       case "nombres_fact":
          validateField(expresiones.nombres, e.target, 'nombres_fact');
       break;

@@ -13,11 +13,12 @@
     <script src="web/public/js/form.js"></script>
     <script type="text/javascript" src="web/public/js/validaforms.js"></script>
     <script src="web/public/js/datatables.min.js"></script>
+    
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
     
     
     <!--<script src='web/public/plugins/validateIdEc/dist/ruc_jquery_validator.min.js'></script>
-
+    
     <script>
         $(document).ready(function(){
             
@@ -45,6 +46,7 @@
    <script>
       $(document).ready(function() {
          $('#list-usuario, #list_persona_natural, #list-representante-legal, #list-miembro-empresa').DataTable({
+            order: [[0, 'desc']],
             "language": {
                   "lengthMenu": "Mostrar _MENU_ registros por página",
                   "zeroRecords": "No se encontró nada, lo siento",
@@ -53,6 +55,7 @@
                   "infoFiltered": "(filtrado de _MAX_ registros totales)",
                   "search": "Buscar:",
                   "pagingType": "full_numbers",
+                  "order": [0, 'desc'],
                   'paginate': {
                      'previous': 'Anterior',
                      'next': 'Siguiente'

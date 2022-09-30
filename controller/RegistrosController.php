@@ -114,8 +114,10 @@ class RegistrosController extends ControladorBase{
         'fecha_nacimiento'=>$datasol['fecha_nacimiento'],
         'nacionalidad'=>$datasol['nacionalidad'],
         'telfCelular'=>$datasol['telfCelular'],
+        'telfCelular2'=>$datasol['telfCelular2'],
         'telfFijo'=>$datasol['telfFijo'],                                 // opcional no obligatorio 
         'eMail'=>$datasol['eMail'],
+        'eMail2'=>$datasol['cm3'],
         'provincia'=>$datasol['provincia'],
         'ciudad'=>$datasol['ciudad'],
         'direccion'=>$datasol['direccion'],
@@ -128,6 +130,7 @@ class RegistrosController extends ControladorBase{
         'f_adicional2'=>$datasol['f_adicional2'],                         // PDF o JPG codificado en BASE64
         'f_adicional3'=>$datasol['f_adicional3'],                         // PDF o JPG codificado en BASE64
         'f_adicional4'=>$datasol['f_adicional4'],                         // PDF o JPG codificado en BASE64
+        'coddactilar' =>$datasol['codigodactilar'],
         );
 
         $data2 = array(
@@ -143,9 +146,11 @@ class RegistrosController extends ControladorBase{
         'sexo'=>$datasol['sexo'],
         'fecha_nacimiento'=>$datasol['fecha_nacimiento'],
         'nacionalidad'=>$datasol['nacionalidad'],
-        'telfCelular'=>$datasol['telfCelular'],                           // celular personal
+        'telfCelular'=>$datasol['telfCelular'],  
+        'telfCelular2'=>$datasol['telfCelular2'],                         // celular personal
         'telfFijo'=>$datasol['telfFijo'],                                 // opcional no obligatorio 
-        'eMail'=>$datasol['eMail'],                                       // correo personal
+        'eMail'=>$datasol['eMail'],
+        'eMail2'=>$datasol['cm3'],                                      // correo personal
         'empresa'=>$datasol['empresa'],
         'ruc_empresa'=>$datasol['ruc_empresa'],
         'cargo'=>$datasol['cargo'],
@@ -164,6 +169,7 @@ class RegistrosController extends ControladorBase{
         'f_adicional2'=>$datasol['f_adicional2'],                         // PDF o JPG codificado en BASE64
         'f_adicional3'=>$datasol['f_adicional3'],                         // PDF o JPG codificado en BASE64
         'f_adicional4'=>$datasol['f_adicional4'],                         // PDF o JPG codificado en BASE64
+        'coddactilar' =>$datasol['codigodactilar'],
         );
 
         $data3 = array(
@@ -179,9 +185,11 @@ class RegistrosController extends ControladorBase{
         'sexo'=>$datasol['sexo'],
         'fecha_nacimiento'=>$datasol['fecha_nacimiento'],
         'nacionalidad'=>$datasol['nacionalidad'],
-        'telfCelular'=>$datasol['telfCelular'],                           // celular personal
+        'telfCelular'=>$datasol['telfCelular'],  
+        'telfCelular2'=>$datasol['telfCelular2'],                         // celular personal
         'telfFijo'=>$datasol['telfFijo'],                                 // opcional no obligatorio 
-        'eMail'=>$datasol['eMail'],                                       // correo personal
+        'eMail'=>$datasol['eMail'],
+        'eMail2'=>$datasol['cm3'],                                       // correo personal
         'empresa'=>$datasol['empresa'],
         'ruc_empresa'=>$datasol['ruc_empresa'],
         'cargo'=>$datasol['cargo'],
@@ -208,6 +216,7 @@ class RegistrosController extends ControladorBase{
         'f_adicional2'=>$datasol['f_adicional2'],                         // PDF o JPG codificado en BASE64
         'f_adicional3'=>$datasol['f_adicional3'],                         // PDF o JPG codificado en BASE64
         'f_adicional4'=>$datasol['f_adicional4'],                         // PDF o JPG codificado en BASE64
+        'coddactilar' => $datasol['codigodactilar'],
         );
 
         $url = 'https://api.uanataca.ec/v4/solicitud';
@@ -1162,7 +1171,7 @@ class RegistrosController extends ControladorBase{
         'cm5',
         'cm6',
         'factu',
-        'forma_pago',
+        // 'forma_pago',
         'ruc_ced_fact',
         'nombres_fact',
         'correo_fact',
@@ -1174,7 +1183,8 @@ class RegistrosController extends ControladorBase{
         'nombre_partner',
         'servicio_express',
         'fecha_ing_firma',
-        'fecha_env_firma');
+        'fecha_env_firma',
+        'codigodactilar');
 
 
         $values = array($_POST['tipo_solicitud'],
@@ -1225,7 +1235,7 @@ class RegistrosController extends ControladorBase{
         $_POST['cm5'],
         $_POST['cm6'],
         $_POST['factu'],
-        $_POST['forma_pago'],
+        // $_POST['forma_pago'],
         $_POST['ruc_ced_fact'],
         $_POST['nombres_fact'],
         $_POST['correo_fact'],
@@ -1237,7 +1247,8 @@ class RegistrosController extends ControladorBase{
         $_POST['nombre_partner'],
         $_POST['servicio_express'],
         $_POST['fecha_ing_firma'],
-        $_POST['fecha_env_firma']);
+        $_POST['fecha_env_firma'],
+        $_POST['codigodactilar']);
 
         $obj=new EntidadBase();
         /*print_r($_POST);
@@ -1255,15 +1266,16 @@ class RegistrosController extends ControladorBase{
         {
             echo "<script>
                     Swal.fire({
-                        title: 'Registrado con Exito!',
+                        title: '¡Tu tramite fue subido con éxito!',
+                        html: 'Si necesitas saber el estado de tu tramite o enviar el pago da click <a href=\"https://wa.me/message/X6UL7Y5D6MS4F1\" target=\"_blank\">AQUÍ</a> ',
                         icon: 'success',
                         allowOutsideClick: false,
                         imageUrl: 'web/public/img/working.png',
-                        imageWidth: '200px',
+                        imageWidth: '100px',
                         imageAlt: 'Estamos trabajando',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'Ok'
-                      }).then((result) => {
+                        }).then((result) => {
                         if (result.isConfirmed) {
                             window.location='Registros_Solictudes.html';
                         }
@@ -2039,7 +2051,6 @@ class RegistrosController extends ControladorBase{
             echo "<script type='text/javascript'>alert('No hay registros para Persona Natural');window.location='Registros_Solictudes.html';</script>";
         }else{
             $titles=array();
-        
             $fila = 2;
             $objPHPExcel = new PHPExcel();
             $objPHPExcel->getProperties()->setCreator("Reporte Data")->setDescription("Reporte Data");

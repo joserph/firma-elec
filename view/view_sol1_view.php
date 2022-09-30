@@ -65,6 +65,10 @@
                <td><?php echo $datos['numerodocumento']; ?></td>
             </tr>
             <tr>
+               <th>Código Dactilar</th>
+               <td><?php echo $datos['codigodactilar']; ?></td>
+            </tr>
+            <tr>
                <th>RUC Personal</th>
                <td><?php echo $datos['ruc_personal']; ?></td>
             </tr>
@@ -125,7 +129,19 @@
             </tr>
             <tr>
                <th>Foto Cédula Frontal</th>
-               <td><img src="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>" width="350"  alt=""></td>
+               <td>
+                  <img src="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>" id="cedulaFrontal" width="350"  alt="">
+                  <hr>
+                  <?php
+                     $base64Img = $datos['f_cedulaFront'];
+                     // list(, $base64Img) = explode(';', $base64Img);
+                     // list(, $base64Img) = explode(',', $base64Img);
+                     $base64Img = base64_decode($base64Img);
+                     file_put_contents('test.jpg', $base64Img);
+                     echo "<a href='test.jpg' download>Descargar 1</a>"
+                  ?>
+                  <button onclick="descargarImgBase64(data = 'cedulaFrontal')">Descargar</button>
+               </td>
             </tr>
             <tr>
                <th>Foto Cédula Posterior</th>
@@ -248,3 +264,58 @@
    </div>
 </div>
   <!--FIN DE FORM DINAMICO!!-->
+<script>
+function descargarImgBase64(name){
+   let img_base_64 = document.getElementById(name).getAttribute('src');
+
+   urlToFile(img_base_64, name);
+   //console.log(img_base_64);
+    
+}
+let urlToFile = (url, name) => {
+   let arr = url.split(",")
+   //console.log(arr)
+   let mime = arr[0].replace('data:', '').replace(';base64', '')
+   let data = arr[1]
+   // let arrBuffer = base64ToArrayBuffer(data)
+   // let newBlob = new Blob([arrBuffer], {type: mime})
+
+   // let data_url = window.URL.createObjectURL(newBlob)
+
+   // var link = document.createElement('a');
+   // document.body.appendChildl(link);
+   // link.href = data_url;
+   // link.download = name;
+   // link.click();
+   // window.URL.revokeObjectURL(data_url);
+   // link.remove();
+
+   let dataStr = atob(data)
+   let n = dataStr.length
+   let dataArr = new Uint8Array(n)
+
+   while(n--)
+   {
+      dataArr[n] = dataStr.charCodeAt(n)
+   }
+   
+   let file = new File([dataArr], name + '.jpg', {type: mime})
+
+   let payload = new FormData()
+   let test = payload.append('file', file)
+   // let d = window.URL.createObjectURL(file)
+   // console.log(d)
+   console.log(test)
+}
+
+function base64ToArrayBuffer(base64) {
+    var binaryString = window.atob(base64);
+    var binaryLen = binaryString.length;
+    var bytes = new Uint8Array(binaryLen);
+    for (var i = 0; i < binaryLen; i++) {
+       var ascii = binaryString.charCodeAt(i);
+       bytes[i] = ascii;
+    }
+    return bytes;
+ }
+</script>

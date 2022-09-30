@@ -35,7 +35,7 @@
                            
                         </div>
                      </div>
-                     <div class="text-warning"><p>(<i class="fab fa-diaspora text-warning"></i>) <em>Campo Requerido</em></p></div>
+                     <div class="text-warning"><p>(<i class="fab fa-diaspora text-warning"></i>) <em>Campo Obligatorio</em></p></div>
                      <div class="row setup-content" id="step-1">
                         <input type="hidden" name="tipo_solicitud" class="form-control" value="1">
                         <div class="form-group col-md-4" id="g_contenedor">
@@ -51,18 +51,18 @@
                            </div>
                            
                         </div>
-                        <div class="form-group col-md-6" id="g_nombres">
+                        <div class="form-group col-md-4" id="g_nombres">
                            <div class="col-md-12">
                               <label for="nombre">Nombres <i class="fab fa-diaspora text-warning"></i></label>
                               <input type="text" name="nombres" class="form-control" placeholder="Calos Andres" required>
-                              <span id="error_nombres" class="help-block ocultar"><small>El campo es requerido y no acepta números ni caracteres especiales</small></span>
+                              <span id="error_nombres" class="help-block ocultar"><small>El campo es obligatorio y no acepta números ni caracteres especiales</small></span>
                            </div>
                         </div>
                         <div class="form-group col-md-4" id="g_apellido1">
                            <div class="col-md-12">
                               <label for="nombre">Primer Apellido <i class="fab fa-diaspora text-warning"></i></label>
                               <input type="text" name="apellido1" class="form-control" placeholder="Cardenas" required>
-                              <span id="error_apellido1" class="help-block ocultar"><small>El campo es requerido y no acepta números ni caracteres especiales</small></span>
+                              <span id="error_apellido1" class="help-block ocultar"><small>El campo es obligatorio y no acepta números ni caracteres especiales</small></span>
                            </div>
                         </div>
                         <div class="form-group col-md-4" id="g_apellido2">
@@ -87,6 +87,12 @@
                            <div class="col-md-12">
                               <label for="nombre">Número de documento <i class="fab fa-diaspora text-warning"></i></label>
                               <input type="text" name="numerodocumento" id="numerodocumento" maxlength=13 onblur="validarDocumento('numerodocumento')" class="form-control" placeholder="0102698867" required>
+                           </div>
+                        </div>
+                        <div class="form-group col-md-4" id="g_codigodactilar">
+                           <div class="col-md-12">
+                              <label for="nombre">Código Dactilar 
+                              <input type="text" name="codigodactilar" id="codigodactilar" maxlength=13 class="form-control" placeholder="EXXXXEXXXX">
                            </div>
                         </div>
                               <div class="form-group col-md-4" id="g_cm1">
@@ -115,35 +121,35 @@
                                     <option value="HOMBRE">HOMBRE</option>
                                     <option value="MUJER">MUJER</option>
                                  </select>
-                                 <span id="error_sexo" class="help-block ocultar"><small>El campo es requerido y debe seleccionar un tipo de Sexo</small></span>
+                                 <span id="error_sexo" class="help-block ocultar"><small>El campo es obligatorio y debe seleccionar un tipo de Sexo</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-4" id="g_fecha_nacimiento">
                                  <div class="col-md-12">
                                  <label for="nombre">Fecha de Nacimiento <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="date" name="fecha_nacimiento" class="form-control" placeholder="" required>
-                                 <span id="error_fecha_nacimiento" class="help-block ocultar"><small>El campo es requerido</small></span>
+                                 <span id="error_fecha_nacimiento" class="help-block ocultar"><small>El campo es obligatorio</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-4" id="g_nacionalidad">
                                  <div class="col-md-12">
                                  <label for="nombre">Nacionalidad <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="text" name="nacionalidad" class="form-control" placeholder="ECUATORIANA" required>
-                                 <span id="error_nacionalidad" class="help-block ocultar"><small>El campo es requerido y no acepta números ni caracteres especiales</small></span>
+                                 <span id="error_nacionalidad" class="help-block ocultar"><small>El campo es obligatorio y no acepta números ni caracteres especiales</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-4" id="g_telfCelular">
                                  <div class="col-md-12">
                                  <label for="nombre">Teléfono Celular <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="text" name="telfCelular" class="form-control" placeholder="0912345678" required>
-                                 <span id="error_telfCelular" class="help-block ocultar"><small>El campo es requerido y no acepta letras ni caracteres especiales</small></span>
+                                 <span id="error_telfCelular" class="help-block ocultar"><small>El campo es obligatorio y no acepta letras ni caracteres especiales</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-4" id="g_telfCelular2">
                                  <div class="col-md-12">
                                  <label for="nombre">Teléfono Celular 2 <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="text" name="telfCelular2" class="form-control" placeholder="0912345678" required>
-                                 <span id="error_telfCelular2" class="help-block ocultar"><small>El campo es requerido y no acepta letras ni caracteres especiales</small></span>
+                                 <span id="error_telfCelular2" class="help-block ocultar"><small>El campo es obligatorio y no acepta letras ni caracteres especiales</small></span>
                                  </div>
                               </div>
                               <!--<div class="form-group col-md-4" id="g_telfFijo" style="display:none">
@@ -157,14 +163,14 @@
                                  <div class="col-md-12">
                                  <label for="nombre">Correo <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="email" name="eMail" class="form-control" placeholder="prueba@gmail.com" required>
-                                 <span id="error_eMail" class="help-block ocultar"><small>El campo es requerido y debe ingresar un correo valido</small></span>
+                                 <span id="error_eMail" class="help-block ocultar"><small>El campo es obligatorio y debe ingresar un correo valido</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-4" id="g_cm3">
                                  <div class="col-md-12">
                                  <label for="nombre">Correo 2 <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="email" name="cm3" class="form-control" placeholder="prueba2@gmail.com" required>
-                                 <span id="error_cm3" class="help-block ocultar"><small>El campo es requerido y debe ingresar un correo valido</small></span>
+                                 <span id="error_cm3" class="help-block ocultar"><small>El campo es obligatorio y debe ingresar un correo valido</small></span>
                                  </div>
                               </div>
                               <!-- 5 Campos adicionales no van para PERSONA NATURAL -->
@@ -172,7 +178,7 @@
                                  <div class="col-md-12">
                                  <label for="nombre">Empresa</label>
                                  <input type="text" name="empresa" class="form-control" placeholder="0912345678">
-                                 <span id="error_empresa" class="help-block ocultar"><small>El campo es requerido y no acepta números ni caracteres especiales</small></span>
+                                 <span id="error_empresa" class="help-block ocultar"><small>El campo es obligatorio y no acepta números ni caracteres especiales</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-6" style="display:none">
@@ -231,14 +237,14 @@
                                     <option value="Galápagos">Galápagos</option>  
                                     <option value="Antártida Ecuatoriana">Antártida Ecuatoriana</option>  
                                  </select>
-                                 <span id="error_provincia" class="help-block ocultar"><small>El campo es requerido y debe seleccionar una Provincia</small></span>
+                                 <span id="error_provincia" class="help-block ocultar"><small>El campo es obligatorio y debe seleccionar una Provincia</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-4" id="g_ciudad">
                                  <div class="col-md-12">
                                  <label for="nombre">Ciudad <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="text" name="ciudad" class="form-control" placeholder="QUITO" required>
-                                 <span id="error_ciudad" class="help-block ocultar"><small>El campo es requerido y no acepta números ni caracteres especiales</small></span>
+                                 <span id="error_ciudad" class="help-block ocultar"><small>El campo es obligatorio y no acepta números ni caracteres especiales</small></span>
                                  </div>
                               </div>
                               <!-- 4 Campos adicionales no van para PERSONA NATURAL -->
@@ -275,7 +281,7 @@
                                  <div class="col-md-11">
                                  <label for="nombre">Dirección <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="text" name="direccion" id="direccion" class="form-control" placeholder="Av. 10 DE AGOSTO N45-12 Y SELVA ALEGRE" required>
-                                 <span id="error_direccion" class="help-block ocultar"><small>El campo es requerido</small></span>
+                                 <span id="error_direccion" class="help-block ocultar"><small>El campo es obligatorio</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-5" id="g_vigenciafirma">
@@ -290,14 +296,14 @@
                                     <option value="5 años">5 Años</option>
                                     <option value="7 días">7 días</option>
                                  </select>
-                                 <span id="error_vigenciafirma" class="help-block ocultar"><small>El campo es requerido y debe seleccionar una Vigencia</small></span>
+                                 <span id="error_vigenciafirma" class="help-block ocultar"><small>El campo es obligatorio y debe seleccionar una Vigencia</small></span>
                                  </div>
                               </div>
                               <div class="form-group col-md-12 ocultar" id="g_cm4">
                                  <div class="col-md-11">
                                  <label for="nombre">Dirección de Entrega <i class="fab fa-diaspora text-warning"></i></label>
                                  <input type="text" name="cm4" id="cm4" class="form-control" placeholder="Av. 10 DE AGOSTO N45-12 Y SELVA ALEGRE">
-                                 <span id="error_direccion" class="help-block ocultar"><small>El campo es requerido</small></span>
+                                 <span id="error_direccion" class="help-block ocultar"><small>El campo es obligatorio</small></span>
                                  </div>
                               </div>
                               
@@ -447,41 +453,8 @@
                            </table>
                         </div>
                         <hr>
-                        <h2>Datos para la Factura Electrónica</h2>
+                        <h2>Datos para la Factura</h2>
                         <hr>
-                        <div class="alert alert-info alert-dismissible" role="alert">
-                           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                           <strong>En caso de Pago Online!</strong> Comunicarse con <a href="https://wa.me/593939860303?text=Me%20interesa%20hacer%20Pago%20Online" target="_blank" style="color: black;">093 986 0303</a> (Haz clic en el número para ir directo a Whatsapp).
-                        </div>
-                        <div class="form-group col-md-4" id="g_forma_pago">
-                           <div class="col-md-12">
-                              <label for="nombre">Forma de Pago <i class="fab fa-diaspora text-warning"></i></label>
-                              <select class="form-control" name="forma_pago" id="forma_pago" required>
-                                 <option value="">Seleccione Forma de pago</option>
-                                 <option value="Transferencia">Transferencia/Depósito</option>
-                                 <option value="Online">Pago ONLINE</option>
-                              </select>
-                              <span id="error_forma_pago" class="help-block ocultar"><small>El campo es requerido y debe seleccionar una Forma de Pago</small></span>
-                           </div>
-                           
-                        </div>
-                        <div class="form-group col-md-6" id="g_nombre_partner">
-                           <div class="col-md-12">
-                           <label for="nombre">Código Partner</label>
-                           <input type="text" name="nombre_partner" id="nombre_partner" class="form-control" maxlength=13 placeholder="Código Partner">
-                           </div>
-                        </div>
-                        <div class="form-group col-md-6" id="g_servicio_express">
-                           <div class="col-md-12">
-                           <label for="nombre">Servicio flash Costo $20 mas iva adicionales (Entrega 15 Minutos) <i class="fab fa-diaspora text-warning"></i></label>
-                           <select class="form-control" name="servicio_express" id="servicio_express" required>
-                              <option value="">Seleccione Servicio</option>
-                              <option value="Si">Si</option>
-                              <option value="No">No</option>
-                           </select>
-                           <span id="error_servicio_express" class="help-block ocultar"><small>El campo es requerido</small></span>
-                           </div>
-                        </div>
                         <div class="form-group col-md-12" id="g_factu">
                            <div class="col-md-12">
                            <label for="nombre">¿Desea su Factura Electrónica con los mismo datos ingresados?</label>
@@ -494,7 +467,39 @@
                            </div>
                         </div>
                         
-                        <div class="form-group col-md-4 ocultar" id="g_ruc_ced_fact">
+                        <!-- <div class="form-group col-md-4" id="g_forma_pago">
+                           <div class="col-md-12">
+                              <label for="nombre">Forma de Pago <i class="fab fa-diaspora text-warning"></i></label>
+                              <select class="form-control" name="forma_pago" id="forma_pago" required>
+                                 <option value="">Seleccione Forma de pago</option>
+                                 <option value="Transferencia">Transferencia/Depósito</option>
+                                 <option value="Online">Pago ONLINE</option>
+                              </select>
+                              <span id="error_forma_pago" class="help-block ocultar"><small>El campo es obligatorio y debe seleccionar una Forma de Pago</small></span>
+                           </div>
+                           
+                        </div> -->
+                        
+                        <div class="form-group col-md-6" id="g_servicio_express">
+                           <div class="col-md-12">
+                           <label for="nombre">Servicio flash Costo $20 mas iva adicionales (Entrega 15 Minutos) <i class="fab fa-diaspora text-warning"></i></label>
+                           <select class="form-control" name="servicio_express" id="servicio_express" required>
+                              <option value="">Seleccione Servicio</option>
+                              <option value="Si">Si</option>
+                              <option value="No">No</option>
+                           </select>
+                           <span id="error_servicio_express" class="help-block ocultar"><small>El campo es obligatorio</small></span>
+                           </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <div class="form-group col-md-8" id="g_nombre_partner">
+                           <div class="col-md-12">
+                           <label for="nombre">Campo opcional Nombre y Apellido del Partner</label>
+                           <input type="text" name="nombre_partner" id="nombre_partner" class="form-control" maxlength=13 placeholder="Nombre y Apellido del Partner">
+                           </div>
+                        </div>
+                        <div class="form-group col-md-5 ocultar" id="g_ruc_ced_fact">
                            <div class="col-md-12">
                            <label for="nombre">RUC / Cédula <i class="fab fa-diaspora text-warning"></i></label>
                            <input type="text" name="ruc_ced_fact" id="ruc_ced_fact" class="form-control" maxlength=13 onblur="validarDocumento('ruc_ced_fact')" placeholder="Ruc / Cédula en Factura">
@@ -504,28 +509,28 @@
                            <div class="col-md-13">
                               <label for="nombre">Nombres Completos <i class="fab fa-diaspora text-warning"></i></label>
                               <input type="text" name="nombres_fact" id="nombres_fact" class="form-control" placeholder="Nombre en Factura">
-                              <span id="error_nombres_fact" class="help-block ocultar"><small>El campo es requerido y no acepta números ni caracteres especiales</small></span>
+                              <span id="error_nombres_fact" class="help-block ocultar"><small>El campo es obligatorio y no acepta números ni caracteres especiales</small></span>
                            </div>
                         </div>
                         <div class="form-group col-md-4 ocultar" id="g_correo_fact">
                            <div class="col-md-12">
                            <label for="nombre">Correo (si desea puede modificarse)<i class="fab fa-diaspora text-warning"></i></label>
                            <input type="email" name="correo_fact" id="correo_fact" class="form-control" placeholder="prueba@gmail.com">
-                           <span id="error_correo_fact" class="help-block ocultar"><small>El campo es requerido y debe ingresar un correo valido</small></span>
+                           <span id="error_correo_fact" class="help-block ocultar"><small>El campo es obligatorio y debe ingresar un correo valido</small></span>
                            </div>
                         </div>
                         <div class="form-group col-md-12 ocultar" id="g_direccion_fact">
                            <div class="col-md-11">
                            <label for="nombre">Dirección <i class="fab fa-diaspora text-warning"></i></label>
                            <input type="text" name="direccion_fact" id="direccion_fact" class="form-control" placeholder="Dirección en factura">
-                           <span id="error_direccion_fact" class="help-block ocultar"><small>El campo es requerido</small></span>
+                           <span id="error_direccion_fact" class="help-block ocultar"><small>El campo es obligatorio</small></span>
                            </div>
                         </div>
                         <div class="form-group col-md-4 ocultar" id="g_telef_fact">
                            <div class="col-md-12">
                            <label for="nombre">Teléfono Fíjo <i class="fab fa-diaspora text-warning"></i></label>
                            <input type="text" name="telef_fact" id="telef_fact" class="form-control" placeholder="Teléfono en factura">
-                           <span id="error_telef_fact" class="help-block ocultar"><small>El campo es requerido y no acepta letras ni caracteres especiales</small></span>
+                           <span id="error_telef_fact" class="help-block ocultar"><small>El campo es obligatorio y no acepta letras ni caracteres especiales</small></span>
                            </div>
                         </div>
                         <div class="table-responsive col-md-12" style="display: none;">
@@ -565,7 +570,7 @@
                            </div>
                         </div>
                         <div class="col-md-12">
-                           <p class="bg-success">¿Quieres ser Partner? Comunícate con nosotros al siguiente numero 0951234567</p>
+                           <p class="bg-success">¿Quieres ser Partner? Comunícate con nosotros a los siguientes números 0939860303 - 0982576150</p>
                         </div>
                         
 
