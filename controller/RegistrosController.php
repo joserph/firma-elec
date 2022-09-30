@@ -395,6 +395,7 @@ class RegistrosController extends ControladorBase{
     }
 
     public function VerSoli(){
+        print_r('hola mundo');
         $obj=new EntidadBase();
         $data=$obj->getById($_GET['id'],"solicitudes2","id_solicitud");
 
