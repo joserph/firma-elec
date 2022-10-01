@@ -141,24 +141,27 @@
             </tr>
             <tr>
                <th>Foto Cédula Frontal</th>
-               <td><img src="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>" width="350"  alt=""></td>
+               <td>
+                  <img src="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>" width="350"  alt="">
+                  <hr>
+                  <a download="<?php echo $datos['numerodocumento']; ?>_f_cedulaFront.jpg" class="btn btn-primary" href="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>">Descargar</a>
+               </td>
+               
             </tr>
             <tr>
                <th>Foto Cédula Posterior</th>
-               <td><img src="data:image/jpg;base64,<?php echo $datos['f_cedulaBack']; ?>" width="350"  alt=""></td>
+               <td>
+                  <img src="data:image/jpg;base64,<?php echo $datos['f_cedulaBack']; ?>" width="350"  alt="">
+                  <hr>
+                  <a download="<?php echo $datos['numerodocumento']; ?>_f_cedulaBack.jpg" class="btn btn-primary" href="data:image/jpg;base64,<?php echo $datos['f_cedulaBack']; ?>">Descargar</a>
+               </td>
             </tr>
             <tr>
                <th>Foto Tipo Selfie</th>
-               <td><img src="data:image/jpg;base64,<?php echo $datos['f_selfie']; ?>" width="350"  alt=""></td>
-            </tr>
-            <tr>
-               <th>Documento Adicional 1</th>
                <td>
-                  <?php if($datos['f_adicional1']){ ?>
-                     <embed src='data:application/pdf;base64,<?php echo $datos['f_adicional1']; ?>' width='80%' type='application/pdf'>
-                  <?php }else{ ?>
-                     <p class="lead">No hay PDF guardado</p>
-                  <?php } ?>
+                  <img src="data:image/jpg;base64,<?php echo $datos['f_selfie']; ?>" width="350"  alt="">
+                  <hr>
+                  <a download="<?php echo $datos['numerodocumento']; ?>_f_selfie.jpg" class="btn btn-primary" href="data:image/jpg;base64,<?php echo $datos['f_selfie']; ?>">Descargar</a>
                </td>
             </tr>
             <tr>
@@ -166,16 +169,33 @@
                <td>
                   <?php if($datos['f_copiaruc']){ ?>
                      <embed src='data:application/pdf;base64,<?php echo $datos['f_copiaruc']; ?>' width='80%' type='application/pdf'>
+                     <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_f_copiaruc.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_copiaruc']; ?>">Descargar</a>
                   <?php }else{ ?>
                      <p class="lead">No hay PDF guardado</p>
                   <?php } ?>
                </td>
             </tr>
             <tr>
+               <th>Documento Adicional 1</th>
+               <td>
+                  <?php if($datos['f_adicional1']){ ?>
+                     <embed src='data:application/pdf;base64,<?php echo $datos['f_adicional1']; ?>' width='80%' type='application/pdf'>
+                     <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_f_adicional1.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_adicional1']; ?>">Descargar</a>
+                  <?php }else{ ?>
+                     <p class="lead">No hay PDF guardado</p>
+                  <?php } ?>
+               </td>
+            </tr>
+            
+            <tr>
                <th>Acta de Nombramiento (Carta aceptación)</th>
                <td>
                   <?php if($datos['f_nombramiento']){ ?>
                      <embed src='data:application/pdf;base64,<?php echo $datos['f_nombramiento']; ?>' width='80%' type='application/pdf'>
+                     <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_f_nombramiento.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_nombramiento']; ?>">Descargar</a>
                   <?php }else{ ?>
                      <p class="lead">No hay PDF guardado</p>
                   <?php } ?>
@@ -186,6 +206,8 @@
                <td>
                   <?php if($datos['f_nombramiento2']){ ?>
                      <embed src='data:application/pdf;base64,<?php echo $datos['f_nombramiento2']; ?>' width='80%' type='application/pdf'>
+                     <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_f_nombramiento2.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_nombramiento2']; ?>">Descargar</a>
                   <?php }else{ ?>
                      <p class="lead">No hay PDF guardado</p>
                   <?php } ?>
@@ -196,6 +218,8 @@
                <td>
                   <?php if($datos['f_constitucion']){ ?>
                      <embed src='data:application/pdf;base64,<?php echo $datos['f_constitucion']; ?>' width='80%' type='application/pdf'>
+                     <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_f_constitucion.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_constitucion']; ?>">Descargar</a>
                   <?php }else{ ?>
                      <p class="lead">No hay PDF guardado</p>
                   <?php } ?>
@@ -207,6 +231,8 @@
                   <?php if($datos['cm2']){ ?>
                      <video width="80%" height="300" controls>
                         <source src='data:video/mp4;base64,<?php echo $datos['cm2']; ?>' type='video/mp4'>
+                        <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_cm2.pdf" class="btn btn-primary" href="data:image/mp4;base64,<?php echo $datos['cm2']; ?>">Descargar</a>
                      </video>
                   <?php }else{ ?>
                      <p class="lead">No hay Video guardado</p>

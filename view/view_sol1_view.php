@@ -152,18 +152,6 @@
                </td>
             </tr>
             <tr>
-               <th>Documento Adicional 1</th>
-               <td>
-                  <?php if($datos['f_adicional1']){ ?>
-                     <embed src='data:application/pdf;base64,<?php echo $datos['f_adicional1']; ?>' width='80%' height="300" type='application/pdf'>
-                     <hr>
-                     <a download="<?php echo $datos['numerodocumento']; ?>_f_adicional1.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_adicional1']; ?>">Descargar</a>
-                  <?php }else{ ?>
-                     <p class="lead">No hay PDF guardado</p>
-                  <?php } ?>
-               </td>
-            </tr>
-            <tr>
                <th>Copia RUC</th>
                <td>
                   <?php if($datos['f_copiaruc']){ ?>
@@ -175,6 +163,19 @@
                   <?php } ?>
                </td>
             </tr>
+            <tr>
+               <th>Documento Adicional 1</th>
+               <td>
+                  <?php if($datos['f_adicional1']){ ?>
+                     <embed src='data:application/pdf;base64,<?php echo $datos['f_adicional1']; ?>' width='80%' height="300" type='application/pdf'>
+                     <hr>
+                     <a download="<?php echo $datos['numerodocumento']; ?>_f_adicional1.pdf" class="btn btn-primary" href="data:image/pdf;base64,<?php echo $datos['f_adicional1']; ?>">Descargar</a>
+                  <?php }else{ ?>
+                     <p class="lead">No hay PDF guardado</p>
+                  <?php } ?>
+               </td>
+            </tr>
+            
             <tr>
                <th>Adjuntar Video</th>
                <td>

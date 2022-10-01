@@ -289,13 +289,13 @@
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Documento RL</label>
-                                 <input type="file" name="f_documentoRL" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_documentoRL" class="form-control">
                                  </div>
                               </div>
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Autorización RL</label>
-                                 <input type="file" name="f_autreprelegal" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_autreprelegal" class="form-control">
                                  </div>
                               </div>
                               <!-- END -->
@@ -328,7 +328,7 @@
                                     <div class="form-group col-md-11" id="g_f_cedulaFront">
                                        <div class="col-md-12">
                                        <label for="nombre">Foto Cédula Frontal (Formato .jpg) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_cedulaFront" id="f_cedulaFront"  class="form-control files" <?php if(!$datos['f_cedulaFront']) echo 'required' ?> onchange="validateInputFilePhoto('f_cedulaFront')">
+                                       <input type="file" name="f_cedulaFront" accept=".jpg,jpeg" id="f_cedulaFront"  class="form-control files" <?php if(!$datos['f_cedulaFront']) echo 'required' ?> onchange="validateInputFilePhoto('f_cedulaFront')">
                                        </div>
                                     </div>
                                  </td>
@@ -342,7 +342,7 @@
                                     <div class="form-group col-md-11" id="g_f_cedulaBack">
                                        <div class="col-md-12">
                                        <label for="nombre">Foto Cédula Posterior (Formato .jpg) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_cedulaBack" id="f_cedulaBack" class="form-control" <?php if(!$datos['f_cedulaBack']) echo 'required' ?> onchange="validateInputFilePhoto('f_cedulaBack')">
+                                       <input type="file" name="f_cedulaBack" accept=".jpg,jpeg" id="f_cedulaBack" class="form-control" <?php if(!$datos['f_cedulaBack']) echo 'required' ?> onchange="validateInputFilePhoto('f_cedulaBack')">
                                        </div>
                                     </div>
                                  </td>
@@ -356,7 +356,7 @@
                                     <div class="form-group col-md-11" id="g_f_selfie">
                                        <div class="col-md-12">
                                        <label for="nombre">Foto Tipo Selfie (Formato .jpg) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_selfie" id="f_selfie" class="form-control" <?php if(!$datos['f_selfie']) echo 'required' ?> onchange="validateInputFilePhoto('f_selfie')">
+                                       <input type="file" name="f_selfie" accept=".jpg,jpeg" id="f_selfie" class="form-control" <?php if(!$datos['f_selfie']) echo 'required' ?> onchange="validateInputFilePhoto('f_selfie')">
                                        </div>
                                     </div>
                                  </td>
@@ -370,7 +370,7 @@
                                     <div class="form-group col-md-11" id="g_f_copiaruc">
                                        <div class="col-md-12">
                                        <label for="nombre">Copia RUC (Formato .pdf) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_copiaruc" id="f_copiaruc" class="form-control" <?php if(!$datos['f_copiaruc']) echo 'required' ?> onchange="validateInputFilePdf('f_copiaruc')">
+                                       <input type="file" name="f_copiaruc" accept=".pdf" id="f_copiaruc" class="form-control" <?php if(!$datos['f_copiaruc']) echo 'required' ?> onchange="validateInputFilePdf('f_copiaruc')">
                                        </div>
                                     </div>
                                  </td>
@@ -389,7 +389,7 @@
                                  <div class="form-group col-md-11" id="g_f_nombramiento">
                                     <div class="col-md-12">
                                        <label for="nombre">Acta de Nombramiento (Carta aceptación) (Formato .pdf) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_nombramiento" id="f_nombramiento" class="form-control" <?php if(!$datos['f_nombramiento']) echo 'required' ?> onchange="validateInputFilePdf('f_nombramiento')">
+                                       <input type="file" name="f_nombramiento" accept=".pdf" id="f_nombramiento" class="form-control" <?php if(!$datos['f_nombramiento']) echo 'required' ?> onchange="validateInputFilePdf('f_nombramiento')">
                                     </div>
                                  </div>
                                  </td>
@@ -407,7 +407,7 @@
                                     <div class="form-group col-md-11" id="g_f_nombramiento2">
                                        <div class="col-md-12">
                                           <label for="nombre">Acta de Nombramiento (Registro Mercantil o ente regulador) – (No obligatorio si está en un solo archivo en el campo anterior) (Formato .pdf) </label>
-                                          <input type="file" name="f_nombramiento2" id="f_nombramiento2" class="form-control" onchange="validateInputFilePdf('f_nombramiento2')">
+                                          <input type="file" name="f_nombramiento2" accept=".pdf" id="f_nombramiento2" class="form-control" onchange="validateInputFilePdf('f_nombramiento2')">
                                        </div>
                                     </div>
                                  </td>
@@ -425,7 +425,7 @@
                                     <div class="form-group col-md-11" id="g_f_constitucion">
                                        <div class="col-md-12">
                                        <label for="nombre">Acta Constitución (Formato .pdf) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_constitucion" id="f_constitucion" class="form-control" <?php if(!$datos['f_constitucion']) echo 'required' ?> onchange="validateInputFilePdf('f_constitucion')">
+                                       <input type="file" name="f_constitucion" accept=".pdf" id="f_constitucion" class="form-control" <?php if(!$datos['f_constitucion']) echo 'required' ?> onchange="validateInputFilePdf('f_constitucion')">
                                        </div>
                                     </div>
                                  </td>
@@ -443,7 +443,7 @@
                                     <div class="form-group col-md-11" id="g_f_adicional1">
                                        <div class="col-md-12">
                                        <label for="nombre">Documento Adicional 1 (Formato .pdf) </label>
-                                       <input type="file" name="f_adicional1" id="f_adicional1" class="form-control" onchange="validateInputFileSome('f_adicional1')">
+                                       <input type="file" name="f_adicional1" accept=".pdf" id="f_adicional1" class="form-control" onchange="validateInputFileSome('f_adicional1')">
                                        </div>
                                     </div>
                                  </td>
@@ -461,7 +461,7 @@
                                     <div class="form-group col-md-11 ocultar" id="g_f_adicional2">
                                        <div class="col-md-12">
                                        <label for="nombre">Documento Adicional 2 (Formato .pdf) </label>
-                                       <input type="file" name="f_adicional2" id="f_adicional2" class="form-control" onchange="validateInputFileSome('f_adicional2')">
+                                       <input type="file" name="f_adicional2" accept=".pdf" id="f_adicional2" class="form-control" onchange="validateInputFileSome('f_adicional2')">
                                        </div>
                                     </div>
                                  </td>
@@ -474,7 +474,7 @@
                                     <div class="form-group col-md-11 ocultar" id="g_f_adicional3">
                                        <div class="col-md-12">
                                           <label for="nombre">Documento Adicional 3 (Formato .pdf) </label>
-                                          <input type="file" name="f_adicional3" id="f_adicional3" class="form-control" onchange="validateInputFileSome('f_adicional3')">
+                                          <input type="file" name="f_adicional3" accept=".pdf" id="f_adicional3" class="form-control" onchange="validateInputFileSome('f_adicional3')">
                                        </div>
                                     </div>
                                  </td>
@@ -485,7 +485,7 @@
                                     <div class="form-group col-md-11 ocultar" id="g_f_adicional4">
                                        <div class="col-md-12">
                                        <label for="nombre">Documento Adicional 4 (Formato .pdf) </label>
-                                       <input type="file" name="f_adicional4" id="f_adicional4" class="form-control" onchange="validateInputFileSome('f_adicional4')">
+                                       <input type="file" name="f_adicional4" accept=".pdf" id="f_adicional4" class="form-control" onchange="validateInputFileSome('f_adicional4')">
                                        </div>
                                     </div>
                                  </td>
@@ -496,7 +496,7 @@
                                     <div class="form-group col-md-12 <?php if($datos['contenedor'] != 1) echo 'ocultar' ?>" id="g_cm2">
                                        <div class="col-md-12">
                                        <label for="nombre">Adjuntar Video (Formato .mp4) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="cm2" id="cm2" class="form-control" onchange="validateInputFileMp4('cm2')">
+                                       <input type="file" name="cm2" id="cm2" accept=".mp4" class="form-control" onchange="validateInputFileMp4('cm2')">
                                        </div>
                                     </div>
                                  </td>
@@ -553,6 +553,12 @@
                               <option value="">Seleccione Estatus</option>
                               <option value="Pendiente" <?php if($datos['cm6'] == "Pendiente") echo 'selected="selected"'; ?>>Pendiente</option>
                               <option value="Pagado" <?php if($datos['cm6'] == "Pagado") echo 'selected="selected"'; ?>>Pagado</option>
+                              <option value="Abundancia" <?php if($datos['cm6'] == "Abundancia") echo 'selected="selected"'; ?>>Abundancia</option>
+                              <option value="Exito" <?php if($datos['cm6'] == "Exito") echo 'selected="selected"'; ?>>Éxito</option>
+                              <option value="Oficina" <?php if($datos['cm6'] == "Oficina") echo 'selected="selected"'; ?>>Oficina</option>
+                              <option value="Redes" <?php if($datos['cm6'] == "Redes") echo 'selected="selected"'; ?>>Redes</option>
+                              <option value="Ricardo" <?php if($datos['cm6'] == "Ricardo") echo 'selected="selected"'; ?>>Ricardo</option>
+                              <option value="Virginia" <?php if($datos['cm6'] == "Virginia") echo 'selected="selected"'; ?>>Virginia</option>
                            </select>
                            </div>
                         </div>
@@ -614,7 +620,7 @@
                                     <div class="form-group col-md-12" id="g_f_ced_pass_fact">
                                        <div class="col-md-12">
                                        <label for="nombre">Cédula ó pasaporte del Representante Legal <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_ced_pass_fact" id="f_ced_pass_fact" class="form-control" onchange="validateInputFilePhoto('f_ced_pass_fact')">
+                                       <input type="file" name="f_ced_pass_fact" accept=".jpg,jpeg" id="f_ced_pass_fact" class="form-control" onchange="validateInputFilePhoto('f_ced_pass_fact')">
                                        </div>
                                     </div>
                                  </td>
@@ -632,7 +638,7 @@
                                     <div class="form-group col-md-12" id="g_f_ruc_ced_fact">
                                        <div class="col-md-12">
                                        <label for="nombre">RUC de la empresa <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_ruc_ced_fact" id="f_ruc_ced_fact" class="form-control" onchange="validateInputFilePdf('f_ruc_ced_fact')">
+                                       <input type="file" name="f_ruc_ced_fact" accept=".pdf" id="f_ruc_ced_fact" class="form-control" onchange="validateInputFilePdf('f_ruc_ced_fact')">
                                        </div>
                                     </div>
                                  </td>

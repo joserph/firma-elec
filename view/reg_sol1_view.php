@@ -311,31 +311,31 @@
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Acta de Nombramiento</label>
-                                 <input type="file" name="f_nombramiento" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_nombramiento" class="form-control">
                                  </div>
                               </div>
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Acta de Nombramiento 2</label>
-                                 <input type="file" name="f_nombramiento2" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_nombramiento2" class="form-control">
                                  </div>
                               </div>
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Acta Constitución</label>
-                                 <input type="file" name="f_constitucion" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_constitucion" class="form-control">
                                  </div>
                               </div>
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Documento RL</label>
-                                 <input type="file" name="f_documentoRL" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_documentoRL" class="form-control">
                                  </div>
                               </div>
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Autorización RL</label>
-                                 <input type="file" name="f_autreprelegal" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_autreprelegal" class="form-control">
                                  </div>
                               </div>
                               <!-- END -->
@@ -344,19 +344,19 @@
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Documento Adicional 2</label>
-                                 <input type="file" name="f_adicional2" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_adicional2" class="form-control">
                                  </div>
                               </div>
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Documento Adicional 3</label>
-                                 <input type="file" name="f_adicional3" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_adicional3" class="form-control">
                                  </div>
                               </div>
                               <div class="form-group col-md-11" style="display:none">
                                  <div class="col-md-12">
                                  <label for="nombre">Documento Adicional 4</label>
-                                 <input type="file" name="f_adicional4" class="form-control">
+                                 <input type="file" accept=".pdf" name="f_adicional4" class="form-control">
                                  </div>
                               </div>
                               <!-- END -->
@@ -376,7 +376,7 @@
                                     <div class="form-group col-md-12" id="g_f_cedulaFront">
                                        <div class="col-md-12">
                                        <label for="nombre">Foto Cédula Frontal (Formato .jpg) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_cedulaFront" id="f_cedulaFront"  class="form-control files" required onchange="validateInputFilePhoto('f_cedulaFront')">
+                                       <input type="file" name="f_cedulaFront" accept=".jpg,.jpeg" id="f_cedulaFront"  class="form-control files" required onchange="validateInputFilePhoto('f_cedulaFront')">
                                        </div>
                                     </div>
                                  </td>
@@ -389,7 +389,7 @@
                                     <div class="form-group col-md-12" id="g_f_cedulaBack">
                                        <div class="col-md-12">
                                        <label for="nombre">Foto Cédula Posterior (Formato .jpg) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_cedulaBack" id="f_cedulaBack" class="form-control" required onchange="validateInputFilePhoto('f_cedulaBack')">
+                                       <input type="file" name="f_cedulaBack" accept=".jpg,.jpeg" id="f_cedulaBack" class="form-control" required onchange="validateInputFilePhoto('f_cedulaBack')">
                                        </div>
                                     </div>
                                  </td>
@@ -402,7 +402,7 @@
                                     <div class="form-group col-md-12" id="g_f_selfie">
                                        <div class="col-md-12">
                                        <label for="nombre">Foto Tipo Selfie (Formato .jpg) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_selfie" id="f_selfie" class="form-control" required onchange="validateInputFilePhoto('f_selfie')">
+                                       <input type="file" name="f_selfie" id="f_selfie" accept=".jpg,.jpeg" class="form-control" required onchange="validateInputFilePhoto('f_selfie')">
                                        </div>
                                     </div>
                                  </td>
@@ -415,7 +415,7 @@
                                     <div class="form-group col-md-12" id="g_f_adicional1">
                                        <div class="col-md-12">
                                        <label for="nombre">Documento Adicional 1 (Formato .pdf) </label>
-                                       <input type="file" name="f_adicional1" id="f_adicional1" class="form-control" onchange="validateInputFileSome('f_adicional1')">
+                                       <input type="file" name="f_adicional1" id="f_adicional1" accept=".pdf" class="form-control" onchange="validateInputFileSome('f_adicional1')">
                                        </div>
                                     </div>
                                  </td>
@@ -428,7 +428,7 @@
                                     <div class="form-group col-md-12 ocultar" id="g_f_copiaruc">
                                        <div class="col-md-12">
                                        <label for="nombre">Copia RUC (Formato .pdf) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_copiaruc" id="f_copiaruc" class="form-control" onchange="validateInputFilePdf('f_copiaruc')">
+                                       <input type="file" name="f_copiaruc" accept=".pdf" id="f_copiaruc" class="form-control" onchange="validateInputFilePdf('f_copiaruc')">
                                        </div>
                                     </div>
                                  </td>
@@ -441,7 +441,7 @@
                                     <div class="form-group col-md-12 ocultar" id="g_cm2">
                                        <div class="col-md-12">
                                        <label for="nombre">Adjuntar Video (Formato .mp4) <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="cm2" id="cm2" class="form-control" onchange="validateInputFileMp4('cm2')">
+                                       <input type="file" name="cm2" id="cm2" accept=".mp4" class="form-control" onchange="validateInputFileMp4('cm2')">
                                        </div>
                                     </div>
                                  </td>
@@ -540,7 +540,7 @@
                                     <div class="form-group col-md-12 ocultar" id="g_f_ced_pass_fact">
                                        <div class="col-md-12">
                                        <label for="nombre">Cédula ó pasaporte del Representante Legal <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_ced_pass_fact" id="f_ced_pass_fact" class="form-control" onchange="validateInputFilePhoto('f_ced_pass_fact')">
+                                       <input type="file" name="f_ced_pass_fact" id="f_ced_pass_fact" accept=".jpg,.jpeg" class="form-control" onchange="validateInputFilePhoto('f_ced_pass_fact')">
                                        </div>
                                     </div>
                                  </td>
@@ -553,7 +553,7 @@
                                     <div class="form-group col-md-12 ocultar" id="g_f_ruc_ced_fact">
                                        <div class="col-md-12">
                                        <label for="nombre">RUC de la empresa <i class="fab fa-diaspora text-warning"></i></label>
-                                       <input type="file" name="f_ruc_ced_fact" id="f_ruc_ced_fact" class="form-control" onchange="validateInputFilePdf('f_ruc_ced_fact')">
+                                       <input type="file" name="f_ruc_ced_fact" accept=".pdf" id="f_ruc_ced_fact" class="form-control" onchange="validateInputFilePdf('f_ruc_ced_fact')">
                                        </div>
                                     </div>
                                  </td>

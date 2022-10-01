@@ -1,7 +1,7 @@
 <?php
 define("CONTROLADOR_DEFECTO", "Usuarios");
 define("ACCION_DEFECTO", "index");
-define("APIKEY","Kjuh4367@fksavnsd64khHGKfvf732u.ykfHKGVhgkc");
+define("APIKEY","ssuh4367@fksavnsd64khHGKfvf732u.ykfHKGVhgkc");
 define("UID", "25");
 
 

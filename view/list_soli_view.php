@@ -89,6 +89,24 @@
                               }elseif($datos[$i]['cm6'] == 'Pendiente')
                               {  
                                  echo '<td><span class="label label-warning">Pendiente</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Abundancia')
+                              {
+                                 echo '<td><span class="label label-success">Abundancia</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Exito')
+                              {
+                                 echo '<td><span class="label label-success">Éxito</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Oficina')
+                              {
+                                 echo '<td><span class="label label-success">Oficina</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Redes')
+                              {
+                                 echo '<td><span class="label label-success">Redes</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Ricardo')
+                              {
+                                 echo '<td><span class="label label-success">Ricardo</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Virginia')
+                              {
+                                 echo '<td><span class="label label-success">Virginia</span></td>';
                               }else
                               {
                                  echo '<td><span class="label label-default">Sin Estatus</span></td>';
@@ -150,6 +168,7 @@
                            <th class="text-center">Editar</th>
                            <th class="text-center">Procesar</th>
                            <th class="text-center">Consultar</th>
+                           <th class="text-center">Eliminar</th>
                         </tr>
                      </thead>
                      <tbody>
@@ -178,6 +197,24 @@
                               }elseif($datos[$i]['cm6'] == 'Pendiente')
                               {  
                                  echo '<td><span class="label label-warning">Pendiente</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Abundancia')
+                              {
+                                 echo '<td><span class="label label-success">Abundancia</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Exito')
+                              {
+                                 echo '<td><span class="label label-success">Éxito</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Oficina')
+                              {
+                                 echo '<td><span class="label label-success">Oficina</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Redes')
+                              {
+                                 echo '<td><span class="label label-success">Redes</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Ricardo')
+                              {
+                                 echo '<td><span class="label label-success">Ricardo</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Virginia')
+                              {
+                                 echo '<td><span class="label label-success">Virginia</span></td>';
                               }else
                               {
                                  echo '<td><span class="label label-default">Sin Estatus</span></td>';
@@ -193,6 +230,7 @@
                                  echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos[$i]['id_solicitud'].'.html" disabled><i class="fas fa-file-import"></i></a></td>';
                                  echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-search"></i></a></td>';
                               }
+                              echo '<td class="text-center"><form action="Registros-deleteSol-'.$datos[$i]['id_solicitud'].'.html" method="POST" role="form"><button type="submit" data-toggle="tooltip" data-placement="top" title="Eliminar Registro" class="btn btn-danger btn-xs" onclick="return confirm(&quot;¿Seguro de eliminar el Registro de ' . strtoupper($datos[$i]['nombres']) . ' ' . strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) . '?&quot;)"><i class="fas fa-trash-alt"></i></button></form></td>';
                               echo '</tr>';
                            }
                         ?>
@@ -239,6 +277,7 @@
                            <th class="text-center">Editar</th>
                            <th class="text-center">Procesar</th>
                            <th class="text-center">Consultar</th>
+                           <th class="text-center">Eliminar</th>
                         </tr>
                      </thead>
                      <tbody>
@@ -267,6 +306,24 @@
                               }elseif($datos[$i]['cm6'] == 'Pendiente')
                               {  
                                  echo '<td><span class="label label-warning">Pendiente</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Abundancia')
+                              {
+                                 echo '<td><span class="label label-success">Abundancia</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Exito')
+                              {
+                                 echo '<td><span class="label label-success">Éxito</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Oficina')
+                              {
+                                 echo '<td><span class="label label-success">Oficina</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Redes')
+                              {
+                                 echo '<td><span class="label label-success">Redes</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Ricardo')
+                              {
+                                 echo '<td><span class="label label-success">Ricardo</span></td>';
+                              }elseif($datos[$i]['cm6'] == 'Virginia')
+                              {
+                                 echo '<td><span class="label label-success">Virginia</span></td>';
                               }else
                               {
                                  echo '<td><span class="label label-default">Sin Estatus</span></td>';
@@ -282,6 +339,7 @@
                                  echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos[$i]['id_solicitud'].'.html" disabled><i class="fas fa-file-import"></i></a></td>';
                                  echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-search"></i></a></td>';
                               }
+                              echo '<td class="text-center"><form action="Registros-deleteSol-'.$datos[$i]['id_solicitud'].'.html" method="POST" role="form"><button type="submit" data-toggle="tooltip" data-placement="top" title="Eliminar Registro" class="btn btn-danger btn-xs" onclick="return confirm(&quot;¿Seguro de eliminar el Registro de ' . strtoupper($datos[$i]['nombres']) . ' ' . strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) . '?&quot;)"><i class="fas fa-trash-alt"></i></button></form></td>';
                               echo '</tr>';
                            }
                         ?>
