@@ -1194,7 +1194,10 @@ class RegistrosController extends ControladorBase{
         'servicio_express',
         'fecha_ing_firma',
         'fecha_env_firma',
-        'codigodactilar');
+        'codigodactilar',
+        'fecha_deposito',
+        'nombre_banco',
+        'nombre_depositante');
 
 
         $values = array($_POST['tipo_solicitud'],
@@ -1258,7 +1261,10 @@ class RegistrosController extends ControladorBase{
         $_POST['servicio_express'],
         $_POST['fecha_ing_firma'],
         $_POST['fecha_env_firma'],
-        $_POST['codigodactilar']);
+        $_POST['codigodactilar'],
+        $_POST['fecha_deposito'],
+        $_POST['nombre_banco'],
+        $_POST['nombre_depositante']);
 
         $obj=new EntidadBase();
         /*print_r($_POST);

@@ -378,7 +378,7 @@
                                  </td>
                                  <td>
                                     <div id="visor_f_cedulaFront"></div>
-                                    <img src="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>" width="350"  alt="">
+                                    <img id="img_f_cedulaFront" src="data:image/jpg;base64,<?php echo $datos['f_cedulaFront']; ?>" width="350"  alt="">
                                  </td>
                               </tr>
                               <tr>
@@ -392,7 +392,7 @@
                                  </td>
                                  <td>
                                     <div id="visor_f_cedulaBack"></div>
-                                    <img src="data:image/jpg;base64,<?php echo $datos['f_cedulaBack']; ?>" width="350"  alt="">
+                                    <img id="img_f_cedulaBack" src="data:image/jpg;base64,<?php echo $datos['f_cedulaBack']; ?>" width="350"  alt="">
                                  </td>
                               </tr>
                               <tr>
@@ -406,25 +406,7 @@
                                  </td>
                                  <td>
                                     <div id="visor_f_selfie"></div>
-                                    <img src="data:image/jpg;base64,<?php echo $datos['f_selfie']; ?>" width="350"  alt="">
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>
-                                    <div class="form-group col-md-12" id="g_f_adicional1">
-                                       <div class="col-md-12">
-                                       <label for="nombre">Documento Adicional 1 (Formato .pdf) </label>
-                                       <input type="file" name="f_adicional1" accept=".pdf" id="f_adicional1" class="form-control" onchange="validateInputFileSome('f_adicional1')">
-                                       </div>
-                                    </div>
-                                 </td>
-                                 <td>
-                                    <div id="visor_f_adicional1"></div>
-                                    <?php if($datos['f_adicional1']){ ?>
-                                       <embed src='data:application/pdf;base64,<?php echo $datos['f_adicional1']; ?>' width='100%' type='application/pdf'>
-                                    <?php }else{ ?>
-                                       <p class="lead">No hay PDF guardado</p>
-                                    <?php } ?>
+                                    <img id="img_f_selfie" src="data:image/jpg;base64,<?php echo $datos['f_selfie']; ?>" width="350"  alt="">
                                  </td>
                               </tr>
                               <tr>
@@ -439,12 +421,31 @@
                                  <td>
                                     <div id="visor_f_copiaruc"></div>
                                     <?php if($datos['f_copiaruc']){ ?>
-                                       <embed src='data:application/pdf;base64,<?php echo $datos['f_copiaruc']; ?>' width='100%' type='application/pdf'>
+                                       <embed id="pdf_f_copiaruc" src='data:application/pdf;base64,<?php echo $datos['f_copiaruc']; ?>' width='100%' type='application/pdf'>
                                     <?php }else{ ?>
                                        <p class="lead">No hay PDF guardado</p>
                                     <?php } ?>
                                  </td>
                               </tr>
+                              <tr>
+                                 <td>
+                                    <div class="form-group col-md-12" id="g_f_adicional1">
+                                       <div class="col-md-12">
+                                       <label for="nombre">Documento Opcional Autorización Partner (Formato .pdf) </label>
+                                       <input type="file" name="f_adicional1" accept=".pdf" id="f_adicional1" class="form-control" onchange="validateInputFileSome('f_adicional1')">
+                                       </div>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <div id="visor_f_adicional1"></div>
+                                    <?php if($datos['f_adicional1']){ ?>
+                                       <embed id="some_f_adicional1" src='data:application/pdf;base64,<?php echo $datos['f_adicional1']; ?>' width='100%' type='application/pdf'>
+                                    <?php }else{ ?>
+                                       <p class="lead">No hay PDF guardado</p>
+                                    <?php } ?>
+                                 </td>
+                              </tr>
+                              
                               <tr>
                                  <td>
                                     <div class="form-group col-md-12 <?php if($datos['contenedor'] != 1) echo 'ocultar' ?>" id="g_cm2">
@@ -458,7 +459,7 @@
                                     <div id="visor_cm2"></div>
                                     <?php if($datos['cm2']){ ?>
                                        <video width="400" controls>
-                                          <source src='data:video/mp4;base64,<?php echo $datos['cm2']; ?>' width='100%' type='video/mp4'>
+                                          <source id="mp4_cm2" src='data:video/mp4;base64,<?php echo $datos['cm2']; ?>' width='100%' type='video/mp4'>
                                        </video>
                                     <?php }else{ ?>
                                        <p class="lead">No hay Video guardado</p>
@@ -496,11 +497,39 @@
                         </div> -->
                         
                         <hr>
-                        <div class="form-group col-md-6" id="g_cm5">
-                           <div class="col-md-12">
-                           <label for="nombre">Número de Depósito</label>
-                           <input type="text" name="cm5" value="<?php echo $datos['cm5']; ?>" id="cm5" class="form-control" maxlength=13 placeholder="Número de Depósito">
+                        <div class="form-group col-md-12" id="g_cm5">
+                           <div class="col-md-6">
+                              <p class="lead">Realizar su depósito o transferencia a:</p>
+                              <p>
+                                 <strong>Banco Guayaquil</strong>
+                              </p>
+                              <p>Cuenta Corriente No. 33824998</p>
+                              <p>Titular: EC593 DATA SAS</p>
+                              <p>RUC: 1793199100001</p>
+                              <p><strong>Banco Pichincha</strong></p>
+                              <p>Cuenta de Ahorros No. 5706249200</p>
+                              <p>Titular: Virginia Rosario</p>
+                              <p>Correo: info@593firmas.com</p>
+                              
                            </div>
+                           <div class="col-md-6">
+                              <label for="nombre">Fecha</label>
+                              <input type="date" name="fecha_deposito" value="<?php echo $datos['fecha_deposito']; ?>" id="cm5" class="form-control" placeholder="Fecha">
+                              <label for="nombre">Número de Depósito</label>
+                              <input type="text" name="cm5" value="<?php echo $datos['cm5']; ?>" id="cm5" class="form-control" maxlength=13 placeholder="Número de Depósito">
+                              <label for="nombre">Nombre de la institución financiera</label>
+                              <input type="text" name="nombre_banco" value="<?php echo $datos['nombre_banco']; ?>" id="cm5" class="form-control" placeholder="Nombre de la institución financiera">
+                              <label for="nombre">Nombre del titular</label>
+                              <input type="text" name="nombre_depositante" value="<?php echo $datos['nombre_depositante']; ?>" id="cm5" class="form-control" placeholder="Nombre del titular">
+                           </div>
+                           <div class="col-md-12">
+                              <p><h3><strong>NOTA:</strong></h3></p>
+                              <p>* En el concepto del depósito o transferencia coloque el NOMBRE DEL BENEFICIARIO DE LA FIRMA ELECTRONICA</p>
+                              <p>* Para Validar su pago, deberá llenar los campos fecha, numero de comprobante, nombre de la institución financiera, nombre del titular</p>
+                              <hr>
+                           </div>
+                              
+                              
                         </div>
                         <div class="form-group col-md-6" id="g_cm6">
                            <div class="col-md-12">
@@ -584,7 +613,7 @@
                                  <td>
                                     <div id="visor_f_ced_pass_fact"></div>
                                     <?php if($datos['f_ced_pass_fact']){ ?>
-                                       <img src="data:image/jpg;base64,<?php echo $datos['f_ced_pass_fact']; ?>" width="350"  alt="">
+                                       <img id="img_f_ced_pass_fact" src="data:image/jpg;base64,<?php echo $datos['f_ced_pass_fact']; ?>" width="350"  alt="">
                                     <?php }else{ ?>
                                        <p class="lead">No hay Archivo guardado</p>
                                     <?php } ?>
@@ -602,7 +631,7 @@
                                  <td>
                                     <div id="visor_f_ruc_ced_fact"></div>
                                     <?php if($datos['f_ruc_ced_fact']){ ?>
-                                       <embed src='data:application/pdf;base64,<?php echo $datos['f_ruc_ced_fact']; ?>' width='100%' type='application/pdf'>
+                                       <embed id="pdf_f_ruc_ced_fact" src='data:application/pdf;base64,<?php echo $datos['f_ruc_ced_fact']; ?>' width='100%' type='application/pdf'>
                                     <?php }else{ ?>
                                        <p class="lead">No hay PDF guardado</p>
                                     <?php } ?>

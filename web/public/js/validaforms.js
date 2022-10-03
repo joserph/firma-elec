@@ -229,6 +229,7 @@ function factElec(x){
    }
 }
 
+
 // VALIDATE INPUTS FILES
 function validateInputFilePhoto(fileName)
 {
@@ -249,6 +250,7 @@ function validateInputFilePhoto(fileName)
                '<embed src="'+e.target.result+'" width="350" />';
             };
             visor.readAsDataURL(filePhoto.files[0]);
+            document.getElementById(`img_${fileName}`).style.display = 'none';
       }
    }
 }
@@ -272,6 +274,7 @@ function validateInputFilePdf(fileName)
                '<embed src="'+e.target.result+'" width="350" />';
             };
             visor.readAsDataURL(filePhoto.files[0]);
+            document.getElementById(`pdf_${fileName}`).style.display = 'none';
       }
    }
 }
@@ -295,6 +298,7 @@ function validateInputFileSome(fileName)
                '<embed src="'+e.target.result+'" width="350" />';
             };
             visor.readAsDataURL(filePhoto.files[0]);
+            document.getElementById(`some_${fileName}`).style.display = 'none';
       }
    }
 }
@@ -341,6 +345,7 @@ function validateInputFileMp4(fileName)
                '<embed src="'+e.target.result+'" width="350" />';
             };
             visor.readAsDataURL(filePhoto.files[0]);
+            document.getElementById(`mp4_${fileName}`).style.display = 'none';
       }
    }
 }

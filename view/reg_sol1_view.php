@@ -414,7 +414,7 @@
                                  <td>
                                     <div class="form-group col-md-12" id="g_f_adicional1">
                                        <div class="col-md-12">
-                                       <label for="nombre">Documento Adicional 1 (Formato .pdf) </label>
+                                       <label for="nombre">Documento Opcional Autorización Partner (Formato .pdf) </label>
                                        <input type="file" name="f_adicional1" id="f_adicional1" accept=".pdf" class="form-control" onchange="validateInputFileSome('f_adicional1')">
                                        </div>
                                     </div>
@@ -479,6 +479,38 @@
                            </div>
                            
                         </div> -->
+                        <div class="form-group col-md-12" id="g_cm5">
+                           <div class="col-md-6">
+                              <p class="lead">Realizar su depósito o transferencia a:</p>
+                              <p>
+                                 <strong>Banco Guayaquil</strong>
+                              </p>
+                              <p>Cuenta Corriente No. 33824998</p>
+                              <p>Titular: EC593 DATA SAS</p>
+                              <p>RUC: 1793199100001</p>
+                              <p><strong>Banco Pichincha</strong></p>
+                              <p>Cuenta de Ahorros No. 5706249200</p>
+                              <p>Titular: Virginia Rosario</p>
+                              <p>Correo: info@593firmas.com</p>
+                              
+                           </div>
+                           <div class="col-md-6">
+                              <label for="nombre">Fecha</label>
+                              <input type="date" name="fecha_deposito" id="fecha_deposito" class="form-control" placeholder="Fecha">
+                              <label for="nombre">Número de Depósito</label>
+                              <input type="text" name="cm5" id="cm5" class="form-control" maxlength=13 placeholder="Número de Depósito">
+                              <label for="nombre">Nombre de la institución financiera</label>
+                              <input type="text" name="nombre_banco" id="nombre_banco" class="form-control" placeholder="Nombre de la institución financiera">
+                              <label for="nombre">Nombre del titular</label>
+                              <input type="text" name="nombre_depositante" id="nombre_depositante" class="form-control" placeholder="Nombre del titular">
+                           </div>
+                           <div class="col-md-12">
+                              <p><h3><strong>NOTA:</strong></h3></p>
+                              <p>* En el concepto del depósito o transferencia coloque el NOMBRE DEL BENEFICIARIO DE LA FIRMA ELECTRONICA</p>
+                              <p>* Para Validar su pago, deberá llenar los campos fecha, numero de comprobante, nombre de la institución financiera, nombre del titular</p>
+                              <hr>
+                           </div>
+                        </div>
                         
                         <div class="form-group col-md-6" id="g_servicio_express">
                            <div class="col-md-12">
@@ -576,12 +608,12 @@
 
                         <div class="col-md-12">
                            
-                           <div class="form-group col-md-6" style="display: none;">
+                           <!-- <div class="form-group col-md-6" style="display: none;">
                               <div class="col-md-12">
                                  <label class="control-label">Campo 5</label>
                                  <input maxlength="100" type="text" name="cm5" class="form-control" placeholder="" />
                               </div>
-                           </div>
+                           </div> -->
                            
 
                            <div class="form-group col-md-6" style="display: none;">

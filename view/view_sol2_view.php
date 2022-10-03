@@ -177,7 +177,7 @@
                </td>
             </tr>
             <tr>
-               <th>Documento Adicional 1</th>
+               <th>Documento Opcional Autorización Partner</th>
                <td>
                   <?php if($datos['f_adicional1']){ ?>
                      <embed src='data:application/pdf;base64,<?php echo $datos['f_adicional1']; ?>' width='80%' type='application/pdf'>
