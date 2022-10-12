@@ -8,9 +8,13 @@ class RegistrosController extends ControladorBase{
 
     public function Solictudes(){
        $obj=new EntidadBase();
-       $data=$obj->getAll("solicitudes2");
+       $data=$obj->getSoliPersonalized("solicitudes2", 1);
+       $data2 = $obj->getSoliPersonalized("solicitudes2", 2);
+       $data3 = $obj->getSoliPersonalized("solicitudes2", 3);
        $this->view("list_soli",array(
-           "datos"=>$data
+           "datos"=>$data,
+           "datos2"=>$data2,
+           "datos3"=>$data3
            ));
     }
 

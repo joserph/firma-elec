@@ -32,6 +32,26 @@ class EntidadBase{
            $resultSet[]=$row;
            
         }
+        // print_r($resultSet);
+        // exit();
+        return $resultSet;
+    }
+
+    public function getSoliPersonalized($val, $id_tipo_sol)
+    {
+        $this->table = $val;
+        $id_sol = 'id_solicitud';
+        $query = $this->db->prepare("SELECT `id_solicitud`, `tipo_solicitud`, `fecha_ing_firma`, `numerodocumento`, `nombres`, `apellido1`, `apellido2`, `statusp`, `nombre_partner`, `cm6`, `cm5` FROM $this->table WHERE `tipo_solicitud` = $id_tipo_sol ORDER BY $id_sol DESC LIMIT 1000");
+        
+        $query->execute();
+        
+        $resultSet = array();
+        
+        while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+           $resultSet[]=$row;
+        }
+        // print_r($resultSet);
+        // exit();
         return $resultSet;
     }
     

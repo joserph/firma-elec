@@ -16,7 +16,7 @@
     <!--<script type="text/javascript" language="javascript" src="web/public/js/jquery.dataTables.js"></script>-->
     <link rel="stylesheet" href="web/public/iconos/css/font-awesome.css">
     <link rel="stylesheet" href="web/public/octicons/octicons.css">
-    <link href="assets/stylesheets/bootstrap-toggle.min.css" rel="stylesheet">
+    <!-- <link href="assets/stylesheets/bootstrap-toggle.min.css" rel="stylesheet"> -->
     <link rel="icon" type="image/x-icon" href="web/public/img/favicon.ico">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     

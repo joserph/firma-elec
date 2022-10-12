@@ -68,10 +68,10 @@
                         <?php 
                            for($i=0;$i<sizeof($datos);$i++)
                            {
-                              if($datos[$i]['tipo_solicitud'] != 1)
-                              {
-                                 continue;
-                              }
+                              // if($datos[$i]['tipo_solicitud'] != 1)
+                              // {
+                              //    continue;
+                              // }
                               echo '<tr>';
                               echo '<td >'. date('Y/m/d h:i:s', strtotime($datos[$i]['fecha_ing_firma'])).'</td>';
                               echo '<td >'. $datos[$i]['numerodocumento'].'</td>';
@@ -173,64 +173,64 @@
                      </thead>
                      <tbody>
                         <?php
-                           for($i=0;$i<sizeof($datos);$i++)
+                           for($i=0;$i<sizeof($datos2);$i++)
                            {
-                              if($datos[$i]['tipo_solicitud'] != 2)
-                              {
-                                 continue;
-                              }
+                              // if($datos[$i]['tipo_solicitud'] != 2)
+                              // {
+                              //    continue;
+                              // }
                               echo '<tr>';
-                              echo '<td >'. date('Y/m/d h:i:s', strtotime($datos[$i]['fecha_ing_firma'])).'</td>';
-                              echo '<td >'. $datos[$i]['numerodocumento'].'</td>';
-                              echo '<td>'. strtoupper($datos[$i]['nombres']) .'</td>';
-                              echo '<td>'. strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) .'</td>';
-                              if($datos[$i]['statusp'] == 0)
+                              echo '<td >'. date('Y/m/d h:i:s', strtotime($datos2[$i]['fecha_ing_firma'])).'</td>';
+                              echo '<td >'. $datos2[$i]['numerodocumento'].'</td>';
+                              echo '<td>'. strtoupper($datos2[$i]['nombres']) .'</td>';
+                              echo '<td>'. strtoupper($datos2[$i]['apellido1'].' '.$datos2[$i]['apellido2']) .'</td>';
+                              if($datos2[$i]['statusp'] == 0)
                               {
                                  echo '<td><span class="label label-warning">Pendiente</span></td>';
                               }else{
                                  echo '<td><span class="label label-success">Procesado</span></td>';
                               }
-                              echo '<td>'.$datos[$i]['nombre_partner'].'</td>';
-                              if($datos[$i]['cm6'] == 'Pagado')
+                              echo '<td>'.$datos2[$i]['nombre_partner'].'</td>';
+                              if($datos2[$i]['cm6'] == 'Pagado')
                               {
                                  echo '<td><span class="label label-success">Pagado</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Pendiente')
+                              }elseif($datos2[$i]['cm6'] == 'Pendiente')
                               {  
                                  echo '<td><span class="label label-warning">Pendiente</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Abundancia')
+                              }elseif($datos2[$i]['cm6'] == 'Abundancia')
                               {
                                  echo '<td><span class="label label-success">Abundancia</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Exito')
+                              }elseif($datos2[$i]['cm6'] == 'Exito')
                               {
                                  echo '<td><span class="label label-success">Éxito</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Oficina')
+                              }elseif($datos2[$i]['cm6'] == 'Oficina')
                               {
                                  echo '<td><span class="label label-success">Oficina</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Redes')
+                              }elseif($datos2[$i]['cm6'] == 'Redes')
                               {
                                  echo '<td><span class="label label-success">Redes</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Ricardo')
+                              }elseif($datos2[$i]['cm6'] == 'Ricardo')
                               {
                                  echo '<td><span class="label label-success">Ricardo</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Virginia')
+                              }elseif($datos2[$i]['cm6'] == 'Virginia')
                               {
                                  echo '<td><span class="label label-success">Virginia</span></td>';
                               }else
                               {
                                  echo '<td><span class="label label-default">Sin Estatus</span></td>';
                               }
-                              echo '<td>'.$datos[$i]['cm5'].'</td>';
-                              echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-info btn-xs" href="Registros-VerSoli-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-eye"></i></a></td>';
-                              echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-warning btn-xs" href="Registros-EditSoli-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-edit"></i></a></td>';
-                              if($datos[$i]['statusp'] == 0)
+                              echo '<td>'.$datos2[$i]['cm5'].'</td>';
+                              echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-info btn-xs" href="Registros-VerSoli-'.$datos2[$i]['id_solicitud'].'.html"><i class="fas fa-eye"></i></a></td>';
+                              echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-warning btn-xs" href="Registros-EditSoli-'.$datos2[$i]['id_solicitud'].'.html"><i class="fas fa-edit"></i></a></td>';
+                              if($datos2[$i]['statusp'] == 0)
                               {
-                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-file-import"></i></a></td>';
-                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos[$i]['id_solicitud'].'.html" disabled><i class="fas fa-search"></i></a></td>';
+                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos2[$i]['id_solicitud'].'.html"><i class="fas fa-file-import"></i></a></td>';
+                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos2[$i]['id_solicitud'].'.html" disabled><i class="fas fa-search"></i></a></td>';
                               }else{
-                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos[$i]['id_solicitud'].'.html" disabled><i class="fas fa-file-import"></i></a></td>';
-                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-search"></i></a></td>';
+                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos2[$i]['id_solicitud'].'.html" disabled><i class="fas fa-file-import"></i></a></td>';
+                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos2[$i]['id_solicitud'].'.html"><i class="fas fa-search"></i></a></td>';
                               }
-                              echo '<td class="text-center"><form action="Registros-deleteSol-'.$datos[$i]['id_solicitud'].'.html" method="POST" role="form"><button type="submit" data-toggle="tooltip" data-placement="top" title="Eliminar Registro" class="btn btn-danger btn-xs" onclick="return confirm(&quot;¿Seguro de eliminar el Registro de ' . strtoupper($datos[$i]['nombres']) . ' ' . strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) . '?&quot;)"><i class="fas fa-trash-alt"></i></button></form></td>';
+                              echo '<td class="text-center"><form action="Registros-deleteSol-'.$datos2[$i]['id_solicitud'].'.html" method="POST" role="form"><button type="submit" data-toggle="tooltip" data-placement="top" title="Eliminar Registro" class="btn btn-danger btn-xs" onclick="return confirm(&quot;¿Seguro de eliminar el Registro de ' . strtoupper($datos2[$i]['nombres']) . ' ' . strtoupper($datos2[$i]['apellido1'].' '.$datos2[$i]['apellido2']) . '?&quot;)"><i class="fas fa-trash-alt"></i></button></form></td>';
                               echo '</tr>';
                            }
                         ?>
@@ -282,64 +282,64 @@
                      </thead>
                      <tbody>
                         <?php
-                           for($i=0;$i<sizeof($datos);$i++)
+                           for($i=0;$i<sizeof($datos3);$i++)
                            {
-                              if($datos[$i]['tipo_solicitud'] != 3)
-                              {
-                                 continue;
-                              }
+                              // if($datos[$i]['tipo_solicitud'] != 3)
+                              // {
+                              //    continue;
+                              // }
                               echo '<tr>';
-                              echo '<td >'. date('Y/m/d h:i:s', strtotime($datos[$i]['fecha_ing_firma'])).'</td>';
-                              echo '<td >' . $datos[$i]['numerodocumento'].'</td>';
-                              echo '<td>' . strtoupper($datos[$i]['nombres']) .'</td>';
-                              echo '<td>' . strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) .'</td>';
-                              if($datos[$i]['statusp'] == 0)
+                              echo '<td >'. date('Y/m/d h:i:s', strtotime($datos3[$i]['fecha_ing_firma'])).'</td>';
+                              echo '<td >' . $datos3[$i]['numerodocumento'].'</td>';
+                              echo '<td>' . strtoupper($datos3[$i]['nombres']) .'</td>';
+                              echo '<td>' . strtoupper($datos3[$i]['apellido1'].' '.$datos3[$i]['apellido2']) .'</td>';
+                              if($datos3[$i]['statusp'] == 0)
                               {
                                  echo '<td><span class="label label-warning">Pendiente</span></td>';
                               }else{
                                  echo '<td><span class="label label-success">Procesado</span></td>';
                               }
-                              echo '<td>'.$datos[$i]['nombre_partner'].'</td>';
-                              if($datos[$i]['cm6'] == 'Pagado')
+                              echo '<td>'.$datos3[$i]['nombre_partner'].'</td>';
+                              if($datos3[$i]['cm6'] == 'Pagado')
                               {
                                  echo '<td><span class="label label-success">Pagado</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Pendiente')
+                              }elseif($datos3[$i]['cm6'] == 'Pendiente')
                               {  
                                  echo '<td><span class="label label-warning">Pendiente</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Abundancia')
+                              }elseif($datos3[$i]['cm6'] == 'Abundancia')
                               {
                                  echo '<td><span class="label label-success">Abundancia</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Exito')
+                              }elseif($datos3[$i]['cm6'] == 'Exito')
                               {
                                  echo '<td><span class="label label-success">Éxito</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Oficina')
+                              }elseif($datos3[$i]['cm6'] == 'Oficina')
                               {
                                  echo '<td><span class="label label-success">Oficina</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Redes')
+                              }elseif($datos3[$i]['cm6'] == 'Redes')
                               {
                                  echo '<td><span class="label label-success">Redes</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Ricardo')
+                              }elseif($datos3[$i]['cm6'] == 'Ricardo')
                               {
                                  echo '<td><span class="label label-success">Ricardo</span></td>';
-                              }elseif($datos[$i]['cm6'] == 'Virginia')
+                              }elseif($datos3[$i]['cm6'] == 'Virginia')
                               {
                                  echo '<td><span class="label label-success">Virginia</span></td>';
                               }else
                               {
                                  echo '<td><span class="label label-default">Sin Estatus</span></td>';
                               }
-                              echo '<td>'.$datos[$i]['cm5'].'</td>';
-                              echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-info btn-xs" href="Registros-VerSoli-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-eye"></i></a></td>';
-                              echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-warning btn-xs" href="Registros-EditSoli-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-edit"></i></a></td>';
-                              if($datos[$i]['statusp'] == 0)
+                              echo '<td>'.$datos3[$i]['cm5'].'</td>';
+                              echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-info btn-xs" href="Registros-VerSoli-'.$datos3[$i]['id_solicitud'].'.html"><i class="fas fa-eye"></i></a></td>';
+                              echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-warning btn-xs" href="Registros-EditSoli-'.$datos3[$i]['id_solicitud'].'.html"><i class="fas fa-edit"></i></a></td>';
+                              if($datos3[$i]['statusp'] == 0)
                               {
-                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-file-import"></i></a></td>';
-                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos[$i]['id_solicitud'].'.html" disabled><i class="fas fa-search"></i></a></td>';
+                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos3[$i]['id_solicitud'].'.html"><i class="fas fa-file-import"></i></a></td>';
+                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos3[$i]['id_solicitud'].'.html" disabled><i class="fas fa-search"></i></a></td>';
                               }else{
-                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos[$i]['id_solicitud'].'.html" disabled><i class="fas fa-file-import"></i></a></td>';
-                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos[$i]['id_solicitud'].'.html"><i class="fas fa-search"></i></a></td>';
+                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-success btn-xs" href="Registros-ProcPago-'.$datos3[$i]['id_solicitud'].'.html" disabled><i class="fas fa-file-import"></i></a></td>';
+                                 echo '<td class="text-center"><a id="btn-listado-equipos" type="button" class="btn btn-primary btn-xs" href="Registros-ListSoli-'.$datos3[$i]['id_solicitud'].'.html"><i class="fas fa-search"></i></a></td>';
                               }
-                              echo '<td class="text-center"><form action="Registros-deleteSol-'.$datos[$i]['id_solicitud'].'.html" method="POST" role="form"><button type="submit" data-toggle="tooltip" data-placement="top" title="Eliminar Registro" class="btn btn-danger btn-xs" onclick="return confirm(&quot;¿Seguro de eliminar el Registro de ' . strtoupper($datos[$i]['nombres']) . ' ' . strtoupper($datos[$i]['apellido1'].' '.$datos[$i]['apellido2']) . '?&quot;)"><i class="fas fa-trash-alt"></i></button></form></td>';
+                              echo '<td class="text-center"><form action="Registros-deleteSol-'.$datos3[$i]['id_solicitud'].'.html" method="POST" role="form"><button type="submit" data-toggle="tooltip" data-placement="top" title="Eliminar Registro" class="btn btn-danger btn-xs" onclick="return confirm(&quot;¿Seguro de eliminar el Registro de ' . strtoupper($datos3[$i]['nombres']) . ' ' . strtoupper($datos3[$i]['apellido1'].' '.$datos3[$i]['apellido2']) . '?&quot;)"><i class="fas fa-trash-alt"></i></button></form></td>';
                               echo '</tr>';
                            }
                         ?>

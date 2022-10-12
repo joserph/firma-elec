@@ -4,7 +4,7 @@
 
     <script type="text/javascript" src="web/public/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" language="javascript" src="web/public/js/jslistadopaises.js"></script>
-    <script src="assets/javascript/bootstrap-toggle.min.js"></script>
+    <!-- <script src="assets/javascript/bootstrap-toggle.min.js"></script> -->
     <script src="https://kit.fontawesome.com/15358da53b.js" crossorigin="anonymous"></script>
     <!-- Bootstrap Core JavaScript -->
     <script type="text/javascript" src="web/public/js/bootstrap-3.3.2.min.js"></script>
