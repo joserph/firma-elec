@@ -2063,8 +2063,8 @@ class RegistrosController extends ControladorBase{
             $nameReport = 'Todos';
         }
 
-        /*print_r($data);
-        exit();*/
+        // print_r($data);
+        // exit();
 
         if(empty($data))
         {
@@ -2090,7 +2090,12 @@ class RegistrosController extends ControladorBase{
                 $value['f_adicional2'] = "";
                 $value['f_adicional3'] = "";
                 $value['f_adicional4'] = "";
+                $value['cm1'] = "";
                 $value['cm2'] = "";
+                $value['cm3'] = "";
+                $value['cm4'] = "";
+                $value['cm5'] = "";
+                $value['cm6'] = "";
                 $value['f_ced_pass_fact'] = "";
                 $value['f_ruc_ced_fact'] = "";
                 $value['fecha_ing_firma'] = "";
@@ -2106,11 +2111,13 @@ class RegistrosController extends ControladorBase{
                 {
                     continue;
                 }
-                
+                // print_r($value);
+                // exit();
                 foreach($value as $key2 => $val)
                 {
                     $titles[]=$key2;
                 }
+                
                 break;
             }
             
@@ -2132,6 +2139,7 @@ class RegistrosController extends ControladorBase{
                 cellfont($objPHPExcel,$cell, 'FFFFFF');
                 cellColor($objPHPExcel,$cell, '666666');
             }
+
             
             $fila = 2;
             
@@ -2157,7 +2165,7 @@ class RegistrosController extends ControladorBase{
                 $datasol3=$obj->getAllById($dat['id_solicitud'],"arc_sol","id_solicitud");
 
                 foreach ($datasol3 as $key4 => $value6) {
-                    $dat[$value6['tipo']] =  $value6['archivo'];
+                    $dat[$value6['tipo']] = $value6['archivo'];
                 }
 
                 
