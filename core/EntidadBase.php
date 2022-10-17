@@ -247,10 +247,10 @@ class EntidadBase{
         return $resultSet;
     }
 
-    public function selectPerDate_1($table, $desde, $hasta, $tipoSol)
+    public function selectPerDate_excel($table, $desde, $hasta, $tipoSol)
     {
         $this->table = $table;
-        $colum = 'fecha_env_firma';
+        $colum = 'fecha_ing_firma';
         $tipo = 'tipo_solicitud';
         $query=$this->db->query("SELECT 
             `id_solicitud`, 
@@ -271,8 +271,17 @@ class EntidadBase{
             `telfCelular2`, 
             `eMail`, 
             `cm3`, 
+            `empresa`, 
+            `ruc_empresa`, 
+            `cargo`, 
+            `motivo`,
+            `unidad`,
             `provincia`, 
-            `ciudad`, 
+            `ciudad`,
+            `nombresRL`,
+            `apellidosRL`,
+            `tipodocumentoRL`,
+            `numerodocumentoRL`, 
             `direccion`, 
             `vigenciafirma`, 
             `fecha_deposito`, 

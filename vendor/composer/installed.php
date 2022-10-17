@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e53b5dd3aac65c328ac6ed883e6ed0be723374da',
+        'reference' => '85362c739be04a2a52a6387e8314d120ba4494f4',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e53b5dd3aac65c328ac6ed883e6ed0be723374da',
+            'reference' => '85362c739be04a2a52a6387e8314d120ba4494f4',
             'dev_requirement' => false,
         ),
         'ezyang/htmlpurifier' => array(
@@ -101,12 +101,12 @@
             'dev_requirement' => false,
         ),
         'psr/simple-cache' => array(
-            'pretty_version' => '3.0.0',
-            'version' => '3.0.0.0',
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/simple-cache',
             'aliases' => array(),
-            'reference' => '764e0b3939f5ca87cb904f570ef9be2d78a07865',
+            'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
             'dev_requirement' => false,
         ),
         'symfony/polyfill-mbstring' => array(
