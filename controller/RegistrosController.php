@@ -1,4 +1,11 @@
 <?php
+
+require 'vendor/autoload.php';
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use PhpOffice\PhpSpreadsheet\IOFactory;
+
 class RegistrosController extends ControladorBase{
     
     public function __construct() {
@@ -2048,7 +2055,7 @@ class RegistrosController extends ControladorBase{
         }
     }
 
-    public function ReportGen1()
+    /*public function ReportGen1()
     {
 
         $obj=new EntidadBase();
@@ -2200,6 +2207,160 @@ class RegistrosController extends ControladorBase{
         
         
         
+    }*/
+
+    public function ReportGen1()
+    {
+        /* Buscamos los datos de la DB */
+        $obj=new EntidadBase();
+
+        $tipoSol = 1;
+        if($_POST['desde'] && $_POST['hasta'])
+        {
+            $datos = $obj->selectPerDate_1("solicitudes2", $_POST['desde'], $_POST['hasta'], $tipoSol);
+            $nameReport = 'Desde_' . $_POST['desde'] . '_Hasta_' . $_POST['hasta'];
+        }else{
+            $datos = $obj->getAllPerSol_1("solicitudes2", $tipoSol);
+            $nameReport = 'Todos';
+        }
+
+        // print_r($datos);
+        // exit();
+        if(empty($datos))
+        {
+            echo "<script type='text/javascript'>alert('No hay registros para Persona Natural');window.location='Registros_Solictudes.html';</script>";
+        }else{
+            /* Inicializamos el pluging */
+            $spreadsheet = new Spreadsheet();
+            $sheet = $spreadsheet->getActiveSheet();
+
+            /* Comenzamos a llenar el archivo */
+            $styleArray = [
+                'borders' => [
+                    'allBorders' => [
+                        'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                        'color' => ['rgb' => '000000'],
+                    ],
+                ],
+            ];
+            $spreadsheet->getActiveSheet()->getColumnDimension('A')->setWidth(4);
+            $spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(12);
+            $spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(12);
+            $spreadsheet->getActiveSheet()->getColumnDimension('D')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('E')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('F')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('G')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('H')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('I')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('J')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('K')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('L')->setWidth(10);
+            // TITULO CABECERA
+            $sheet->getStyle('A1:AJ1')->getFont()->setBold(true);
+            $sheet->mergeCells('A1:AJ1');
+            $sheet->getStyle('A1:AJ1')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+            $sheet->getStyle('A1:AJ1')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+            $sheet->getStyle('A1:AJ1')->applyFromArray($styleArray);
+            $spreadsheet->getActiveSheet()->getStyle('A1:AJ1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+            ->getStartColor()->setRGB('0070C0');
+            $spreadsheet->getActiveSheet()->getStyle('A1:AJ1')->getFont()->getColor()->setRGB('FFFFFF');
+            $sheet->getStyle('A1:AJ1')->getFont()->setSize(20);
+            $sheet->setCellValue('A1', 'PERSONA NATURAL');
+            // Cabecera Archivo
+            $sheet->getStyle('A2:AJ2')->getFont()->setBold(true);
+            $sheet->getStyle('A2:AJ2')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+            $sheet->getStyle('A2:AJ2')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+            $sheet->getStyle('A2:AJ2')->applyFromArray($styleArray);
+            $spreadsheet->getActiveSheet()->getStyle('A2:AJ2')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+            ->getStartColor()->setRGB('000000');
+            $spreadsheet->getActiveSheet()->getStyle('A2:AJ2')->getFont()->getColor()->setRGB('FFFFFF');
+            $sheet->setCellValue('A2', 'ID');
+            $sheet->setCellValue('B2', 'FECHA INGRESO');
+            $sheet->setCellValue('C2', 'FECHA ENVIO');
+            $sheet->setCellValue('D2', 'SOLICITUD');
+            $sheet->setCellValue('E2', 'NOMBRES');
+            $sheet->setCellValue('F2', 'APELLIDO');
+            $sheet->setCellValue('G2', 'APELLIDO_2');
+            $sheet->setCellValue('H2', 'TIPO DOCUMENTO');
+            $sheet->setCellValue('I2', 'NUM DOCUMENTO');
+            $sheet->setCellValue('J2', 'CODIGO DACTILAR');
+            $sheet->setCellValue('K2', 'RUC PERSONAL');
+            $sheet->setCellValue('L2', 'SEXO');
+            $sheet->setCellValue('M2', 'FECHA NACIMIENTO');
+            $sheet->setCellValue('N2', 'NACIONALIDAD');
+            $sheet->setCellValue('O2', 'CELULAR');
+            $sheet->setCellValue('P2', 'CELULAR_2');
+            $sheet->setCellValue('Q2', 'CORREO');
+            $sheet->setCellValue('R2', 'CORREO_2');
+            $sheet->setCellValue('S2', 'PROVINCIA');
+            $sheet->setCellValue('T2', 'CIUDAD');
+            $sheet->setCellValue('U2', 'DIRECCION');
+            $sheet->setCellValue('V2', 'VIGENCIA FIRMA');
+            $sheet->setCellValue('W2', 'FECHA DEPOSITO');
+            $sheet->setCellValue('X2', 'NUM DEPOSITO');
+            $sheet->setCellValue('Y2', 'NOMBRE BANCO');
+            $sheet->setCellValue('Z2', 'NOMBRE DEPOSITANTE');
+            $sheet->setCellValue('AA2', 'ESTATUS DE PAGO');
+            $sheet->setCellValue('AB2', 'FIRMA FLASH');
+            $sheet->setCellValue('AC2', 'PARTNER');
+            $sheet->setCellValue('AD2', 'ESTATUS FIRMA');
+            $sheet->setCellValue('AE2', 'NOMBRE FACTURA');
+            $sheet->setCellValue('AF2', 'RUC FACTURA');
+            $sheet->setCellValue('AG2', 'CORREO FACTURA');
+            $sheet->setCellValue('AH2', 'DIRECCION FACTURA');
+            $sheet->setCellValue('AI2', 'TLF FACTURA');
+            $sheet->setCellValue('AJ2', 'COMENTARIOS');
+
+            $letra = 'A';
+            $num = 3;
+
+            foreach($datos as $key => $data)
+            {
+                $sheet->setCellValue('A' . $num, $data['id_solicitud']);
+                $sheet->setCellValue('B' . $num, $data['fecha_ing_firma']);
+                $sheet->setCellValue('C' . $num, $data['fecha_env_firma']);
+                $sheet->setCellValue('D' . $num, $data['tipo_solicitud']);
+                $sheet->setCellValue('E' . $num, $data['nombres']);
+                $sheet->setCellValue('F' . $num, $data['apellido1']);
+                $sheet->setCellValue('G' . $num, $data['apellido2']);
+                $sheet->setCellValue('H' . $num, $data['tipodocumento']);
+                $sheet->setCellValue('I' . $num, $data['numerodocumento']);
+                $sheet->setCellValue('J' . $num, $data['codigodactilar']);
+                $sheet->setCellValue('K' . $num, $data['ruc_personal']);
+                $sheet->setCellValue('L' . $num, $data['sexo']);
+                $sheet->setCellValue('M' . $num, $data['fecha_nacimiento']);
+                $sheet->setCellValue('N' . $num, $data['nacionalidad']);
+                $sheet->setCellValue('O' . $num, $data['telfCelular']);
+                $sheet->setCellValue('P' . $num, $data['telfCelular2']);
+                $sheet->setCellValue('Q' . $num, $data['eMail']);
+                $sheet->setCellValue('R' . $num, $data['cm3']);
+                $sheet->setCellValue('S' . $num, $data['provincia']);
+                $sheet->setCellValue('T' . $num, $data['ciudad']);
+                $sheet->setCellValue('U' . $num, $data['direccion']);
+                $sheet->setCellValue('V' . $num, $data['vigenciafirma']);
+                $sheet->setCellValue('W' . $num, $data['fecha_deposito']);
+                $sheet->setCellValue('X' . $num, $data['cm5']);
+                $sheet->setCellValue('Y' . $num, $data['nombre_banco']);
+                $sheet->setCellValue('Z' . $num, $data['nombre_depositante']);
+                $sheet->setCellValue('AA' . $num, $data['cm6']);
+                $sheet->setCellValue('AB' . $num, $data['servicio_express']);
+                $sheet->setCellValue('AC' . $num, $data['nombre_partner']);
+                $sheet->setCellValue('AD' . $num, $data['statusp']);
+                $sheet->setCellValue('AE' . $num, $data['nombres_fact']);
+                $sheet->setCellValue('AF' . $num, $data['ruc_ced_fact']);
+                $sheet->setCellValue('AG' . $num, $data['correo_fact']);
+                $sheet->setCellValue('AH' . $num, $data['direccion_fact']);
+                $sheet->setCellValue('AI' . $num, $data['telef_fact']);
+                $sheet->setCellValue('AJ' . $num, $data['comentarios_fact']);
+                $num++;
+            }
+
+            /* Proceso de descargar y titulo del archivo */
+            $writer = new Xlsx($spreadsheet);
+            $filename = 'Reporte_Persona_Natutal_' . $nameReport . '.xlsx';
+            $writer->save($filename);
+            DownloadFile($filename);
+        }
     }
     
     public function ReportGen2()

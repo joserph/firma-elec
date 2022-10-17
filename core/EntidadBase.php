@@ -170,6 +170,62 @@ class EntidadBase{
         return $resultSet;
     }
 
+    public function getAllPerSol_1($table, $tipoSol)
+    {
+        $this->table = $table;
+        $tipo = 'tipo_solicitud';
+        $query=$this->db->query("SELECT 
+            `id_solicitud`, 
+            `fecha_ing_firma`, 
+            `fecha_env_firma`, 
+            `tipo_solicitud`, 
+            `nombres`, 
+            `apellido1`, 
+            `apellido2`, 
+            `tipodocumento`, 
+            `numerodocumento`, 
+            `codigodactilar`, 
+            `ruc_personal`, 
+            `sexo`, 
+            `fecha_nacimiento`, 
+            `nacionalidad`, 
+            `telfCelular`, 
+            `telfCelular2`, 
+            `eMail`, 
+            `cm3`, 
+            `provincia`, 
+            `ciudad`, 
+            `direccion`, 
+            `vigenciafirma`, 
+            `fecha_deposito`, 
+            `cm5`, 
+            `nombre_banco`, 
+            `nombre_depositante`, 
+            `cm6`, 
+            `servicio_express`, 
+            `nombre_partner`, 
+            `statusp`, 
+            `nombres_fact`, 
+            `ruc_ced_fact`, 
+            `correo_fact`, 
+            `direccion_fact`, 
+            `telef_fact`, 
+            `comentarios_fact` FROM $this->table WHERE $tipo = '$tipoSol'");
+        $query->execute();
+        
+        /*print_r($query);
+        exit();*/
+
+        $resultSet = array();
+        
+        while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+           $resultSet[]=$row;
+        }
+        
+        
+        return $resultSet;
+    }
+
     public function selectPerDate($table, $desde, $hasta, $tipoSol)
     {
         $this->table = $table;
@@ -180,6 +236,63 @@ class EntidadBase{
         
         /*print_r($query);
         exit();*/
+
+        $resultSet = array();
+        
+        while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+           $resultSet[]=$row;
+        }
+        
+        
+        return $resultSet;
+    }
+
+    public function selectPerDate_1($table, $desde, $hasta, $tipoSol)
+    {
+        $this->table = $table;
+        $colum = 'fecha_env_firma';
+        $tipo = 'tipo_solicitud';
+        $query=$this->db->query("SELECT 
+            `id_solicitud`, 
+            `fecha_ing_firma`, 
+            `fecha_env_firma`, 
+            `tipo_solicitud`, 
+            `nombres`, 
+            `apellido1`, 
+            `apellido2`, 
+            `tipodocumento`, 
+            `numerodocumento`, 
+            `codigodactilar`, 
+            `ruc_personal`, 
+            `sexo`, 
+            `fecha_nacimiento`, 
+            `nacionalidad`, 
+            `telfCelular`, 
+            `telfCelular2`, 
+            `eMail`, 
+            `cm3`, 
+            `provincia`, 
+            `ciudad`, 
+            `direccion`, 
+            `vigenciafirma`, 
+            `fecha_deposito`, 
+            `cm5`, 
+            `nombre_banco`, 
+            `nombre_depositante`, 
+            `cm6`, 
+            `servicio_express`, 
+            `nombre_partner`, 
+            `statusp`, 
+            `nombres_fact`, 
+            `ruc_ced_fact`, 
+            `correo_fact`, 
+            `direccion_fact`, 
+            `telef_fact`, 
+            `comentarios_fact` FROM $this->table WHERE ($colum BETWEEN '$desde' AND '$hasta') AND $tipo = '$tipoSol'");
+        $query->execute();
+        
+        // print_r($query);
+        // exit();
 
         $resultSet = array();
         
