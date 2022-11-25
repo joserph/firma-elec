@@ -2227,15 +2227,14 @@ class RegistrosController extends ControladorBase{
         $tipoSol = 1;
         if($_POST['desde'] && $_POST['hasta'])
         {
-            $datos = $obj->selectPerDate_1("solicitudes2", $_POST['desde'], $_POST['hasta'], $tipoSol);
+            $datos = $obj->selectPerDate_excel("solicitudes2", $_POST['desde'], $_POST['hasta'], $tipoSol);
             $nameReport = 'Desde_' . $_POST['desde'] . '_Hasta_' . $_POST['hasta'];
         }else{
-            $datos = $obj->getAllPerSol_1("solicitudes2", $tipoSol);
-            $nameReport = 'Todos';
+            // $datos = $obj->getAllPerSol_1("solicitudes2", $tipoSol);
+            // $nameReport = 'Todos';
+            echo "<script type='text/javascript'>alert('Debe Seleccionar un rango de fecha');window.location='Registros_Solictudes.html';</script>";
         }
 
-        // print_r($datos);
-        // exit();
         if(empty($datos))
         {
             echo "<script type='text/javascript'>alert('No hay registros para Persona Natural');window.location='Registros_Solictudes.html';</script>";
@@ -2253,18 +2252,43 @@ class RegistrosController extends ControladorBase{
                     ],
                 ],
             ];
-            $spreadsheet->getActiveSheet()->getColumnDimension('A')->setWidth(4);
-            $spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(12);
-            $spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(12);
+            $spreadsheet->getActiveSheet()->getColumnDimension('A')->setWidth(6);
+            $spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(17);
+            $spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(17);
             $spreadsheet->getActiveSheet()->getColumnDimension('D')->setWidth(10);
-            $spreadsheet->getActiveSheet()->getColumnDimension('E')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('E')->setWidth(20);
             $spreadsheet->getActiveSheet()->getColumnDimension('F')->setWidth(10);
             $spreadsheet->getActiveSheet()->getColumnDimension('G')->setWidth(10);
-            $spreadsheet->getActiveSheet()->getColumnDimension('H')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('H')->setWidth(12);
             $spreadsheet->getActiveSheet()->getColumnDimension('I')->setWidth(15);
             $spreadsheet->getActiveSheet()->getColumnDimension('J')->setWidth(10);
-            $spreadsheet->getActiveSheet()->getColumnDimension('K')->setWidth(10);
-            $spreadsheet->getActiveSheet()->getColumnDimension('L')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('K')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('L')->setWidth(8);
+            $spreadsheet->getActiveSheet()->getColumnDimension('M')->setWidth(12);
+            $spreadsheet->getActiveSheet()->getColumnDimension('N')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('O')->setWidth(11);
+            $spreadsheet->getActiveSheet()->getColumnDimension('P')->setWidth(11);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Q')->setWidth(25);
+            $spreadsheet->getActiveSheet()->getColumnDimension('R')->setWidth(25);
+            $spreadsheet->getActiveSheet()->getColumnDimension('S')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('T')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('U')->setWidth(35);
+            $spreadsheet->getActiveSheet()->getColumnDimension('V')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('W')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('X')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Y')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Z')->setWidth(20);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AA')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AB')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AC')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AD')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AE')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AF')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AG')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AH')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AI')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AJ')->setWidth(10);
+
             // TITULO CABECERA
             $sheet->getStyle('A1:AJ1')->getFont()->setBold(true);
             $sheet->mergeCells('A1:AJ1');
@@ -2372,8 +2396,400 @@ class RegistrosController extends ControladorBase{
             DownloadFile($filename);
         }
     }
-    
+
     public function ReportGen2()
+    {
+        /* Buscamos los datos de la DB */
+        $obj=new EntidadBase();
+
+        $tipoSol = 2;
+        if($_POST['desde'] && $_POST['hasta'])
+        {
+            $datos = $obj->selectPerDate_excel("solicitudes2", $_POST['desde'], $_POST['hasta'], $tipoSol);
+            $nameReport = 'Desde_' . $_POST['desde'] . '_Hasta_' . $_POST['hasta'];
+        }else{
+            // $datos = $obj->getAllPerSol_1("solicitudes2", $tipoSol);
+            // $nameReport = 'Todos';
+            echo "<script type='text/javascript'>alert('Debe Seleccionar un rango de fecha');window.location='Registros_Solictudes.html';</script>";
+        }
+
+        if(empty($datos))
+        {
+            echo "<script type='text/javascript'>alert('No hay registros para Persona Natural');window.location='Registros_Solictudes.html';</script>";
+        }else{
+            /* Inicializamos el pluging */
+            $spreadsheet = new Spreadsheet();
+            $sheet = $spreadsheet->getActiveSheet();
+
+            /* Comenzamos a llenar el archivo */
+            $styleArray = [
+                'borders' => [
+                    'allBorders' => [
+                        'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                        'color' => ['rgb' => '000000'],
+                    ],
+                ],
+            ];
+            $spreadsheet->getActiveSheet()->getColumnDimension('A')->setWidth(6);
+            $spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(17);
+            $spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(17);
+            $spreadsheet->getActiveSheet()->getColumnDimension('D')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('E')->setWidth(20);
+            $spreadsheet->getActiveSheet()->getColumnDimension('F')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('G')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('H')->setWidth(12);
+            $spreadsheet->getActiveSheet()->getColumnDimension('I')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('J')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('K')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('L')->setWidth(8);
+            $spreadsheet->getActiveSheet()->getColumnDimension('M')->setWidth(12);
+            $spreadsheet->getActiveSheet()->getColumnDimension('N')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('O')->setWidth(11);
+            $spreadsheet->getActiveSheet()->getColumnDimension('P')->setWidth(11);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Q')->setWidth(25);
+            $spreadsheet->getActiveSheet()->getColumnDimension('R')->setWidth(25);
+            $spreadsheet->getActiveSheet()->getColumnDimension('S')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('T')->setWidth(20);
+            $spreadsheet->getActiveSheet()->getColumnDimension('U')->setWidth(35);
+            $spreadsheet->getActiveSheet()->getColumnDimension('V')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('W')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('X')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Y')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Z')->setWidth(20);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AA')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AB')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AC')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AD')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AE')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AF')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AG')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AH')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AI')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AJ')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AK')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AL')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AM')->setWidth(10);
+
+            // TITULO CABECERA
+            $sheet->getStyle('A1:AM1')->getFont()->setBold(true);
+            $sheet->mergeCells('A1:AM1');
+            $sheet->getStyle('A1:AM1')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+            $sheet->getStyle('A1:AM1')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+            $sheet->getStyle('A1:AM1')->applyFromArray($styleArray);
+            $spreadsheet->getActiveSheet()->getStyle('A1:AM1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+            ->getStartColor()->setRGB('0070C0');
+            $spreadsheet->getActiveSheet()->getStyle('A1:AM1')->getFont()->getColor()->setRGB('FFFFFF');
+            $sheet->getStyle('A1:AM1')->getFont()->setSize(20);
+            $sheet->setCellValue('A1', 'REPRESENTANTE LEGAL');
+            // Cabecera Archivo
+            $sheet->getStyle('A2:AM2')->getFont()->setBold(true);
+            $sheet->getStyle('A2:AM2')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+            $sheet->getStyle('A2:AM2')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+            $sheet->getStyle('A2:AM2')->applyFromArray($styleArray);
+            $spreadsheet->getActiveSheet()->getStyle('A2:AM2')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+            ->getStartColor()->setRGB('000000');
+            $spreadsheet->getActiveSheet()->getStyle('A2:AM2')->getFont()->getColor()->setRGB('FFFFFF');
+            $sheet->setCellValue('A2', 'ID');
+            $sheet->setCellValue('B2', 'FECHA INGRESO');
+            $sheet->setCellValue('C2', 'FECHA ENVIO');
+            $sheet->setCellValue('D2', 'SOLICITUD');
+            $sheet->setCellValue('E2', 'NOMBRES');
+            $sheet->setCellValue('F2', 'APELLIDO');
+            $sheet->setCellValue('G2', 'APELLIDO_2');
+            $sheet->setCellValue('H2', 'TIPO DOCUMENTO');
+            $sheet->setCellValue('I2', 'NUM DOCUMENTO');
+            $sheet->setCellValue('J2', 'CODIGO DACTILAR');
+            $sheet->setCellValue('K2', 'RUC PERSONAL');
+            $sheet->setCellValue('L2', 'SEXO');
+            $sheet->setCellValue('M2', 'FECHA NACIMIENTO');
+            $sheet->setCellValue('N2', 'NACIONALIDAD');
+            $sheet->setCellValue('O2', 'CELULAR');
+            $sheet->setCellValue('P2', 'CELULAR_2');
+            $sheet->setCellValue('Q2', 'CORREO');
+            $sheet->setCellValue('R2', 'CORREO_2');
+            $sheet->setCellValue('S2', 'EMPRESA');
+            $sheet->setCellValue('T2', 'RUC EMPRESA');
+            $sheet->setCellValue('U2', 'CARGO');
+            $sheet->setCellValue('V2', 'PROVINCIA');
+            $sheet->setCellValue('W2', 'CIUDAD');
+            $sheet->setCellValue('X2', 'DIRECCION');
+            $sheet->setCellValue('Y2', 'VIGENCIA FIRMA');
+            $sheet->setCellValue('Z2', 'FECHA DEPOSITO');
+            $sheet->setCellValue('AA2', 'NUM DEPOSITO');
+            $sheet->setCellValue('AB2', 'NOMBRE BANCO');
+            $sheet->setCellValue('AC2', 'NOMBRE DEPOSITANTE');
+            $sheet->setCellValue('AD2', 'ESTATUS DE PAGO');
+            $sheet->setCellValue('AE2', 'FIRMA FLASH');
+            $sheet->setCellValue('AF2', 'PARTNER');
+            $sheet->setCellValue('AG2', 'ESTATUS FIRMA');
+            $sheet->setCellValue('AH2', 'NOMBRE FACTURA');
+            $sheet->setCellValue('AI2', 'RUC FACTURA');
+            $sheet->setCellValue('AJ2', 'CORREO FACTURA');
+            $sheet->setCellValue('AK2', 'DIRECCION FACTURA');
+            $sheet->setCellValue('AL2', 'TLF FACTURA');
+            $sheet->setCellValue('AM2', 'COMENTARIOS');
+
+            $letra = 'A';
+            $num = 3;
+
+            foreach($datos as $key => $data)
+            {
+                $sheet->setCellValue('A' . $num, $data['id_solicitud']);
+                $sheet->setCellValue('B' . $num, $data['fecha_ing_firma']);
+                $sheet->setCellValue('C' . $num, $data['fecha_env_firma']);
+                $sheet->setCellValue('D' . $num, $data['tipo_solicitud']);
+                $sheet->setCellValue('E' . $num, $data['nombres']);
+                $sheet->setCellValue('F' . $num, $data['apellido1']);
+                $sheet->setCellValue('G' . $num, $data['apellido2']);
+                $sheet->setCellValue('H' . $num, $data['tipodocumento']);
+                $sheet->setCellValue('I' . $num, $data['numerodocumento']);
+                $sheet->setCellValue('J' . $num, $data['codigodactilar']);
+                $sheet->setCellValue('K' . $num, $data['ruc_personal']);
+                $sheet->setCellValue('L' . $num, $data['sexo']);
+                $sheet->setCellValue('M' . $num, $data['fecha_nacimiento']);
+                $sheet->setCellValue('N' . $num, $data['nacionalidad']);
+                $sheet->setCellValue('O' . $num, $data['telfCelular']);
+                $sheet->setCellValue('P' . $num, $data['telfCelular2']);
+                $sheet->setCellValue('Q' . $num, $data['eMail']);
+                $sheet->setCellValue('R' . $num, $data['cm3']);
+                $sheet->setCellValue('S' . $num, $data['empresa']);
+                $sheet->setCellValue('T' . $num, $data['ruc_empresa']);
+                $sheet->setCellValue('U' . $num, $data['cargo']);
+                $sheet->setCellValue('V' . $num, $data['provincia']);
+                $sheet->setCellValue('W' . $num, $data['ciudad']);
+                $sheet->setCellValue('X' . $num, $data['direccion']);
+                $sheet->setCellValue('Y' . $num, $data['vigenciafirma']);
+                $sheet->setCellValue('Z' . $num, $data['fecha_deposito']);
+                $sheet->setCellValue('AA' . $num, $data['cm5']);
+                $sheet->setCellValue('AB' . $num, $data['nombre_banco']);
+                $sheet->setCellValue('AC' . $num, $data['nombre_depositante']);
+                $sheet->setCellValue('AD' . $num, $data['cm6']);
+                $sheet->setCellValue('AE' . $num, $data['servicio_express']);
+                $sheet->setCellValue('AF' . $num, $data['nombre_partner']);
+                $sheet->setCellValue('AG' . $num, $data['statusp']);
+                $sheet->setCellValue('AH' . $num, $data['nombres_fact']);
+                $sheet->setCellValue('AI' . $num, $data['ruc_ced_fact']);
+                $sheet->setCellValue('AJ' . $num, $data['correo_fact']);
+                $sheet->setCellValue('AK' . $num, $data['direccion_fact']);
+                $sheet->setCellValue('AL' . $num, $data['telef_fact']);
+                $sheet->setCellValue('AM' . $num, $data['comentarios_fact']);
+                $num++;
+            }
+
+            /* Proceso de descargar y titulo del archivo */
+            $writer = new Xlsx($spreadsheet);
+            $filename = 'Reporte_Representante_Legal_' . $nameReport . '.xlsx';
+            $writer->save($filename);
+            DownloadFile($filename);
+        }
+    }
+
+    public function ReportGen3()
+    {
+        /* Buscamos los datos de la DB */
+        $obj=new EntidadBase();
+
+        $tipoSol = 3;
+        if($_POST['desde'] && $_POST['hasta'])
+        {
+            $datos = $obj->selectPerDate_excel("solicitudes2", $_POST['desde'], $_POST['hasta'], $tipoSol);
+            $nameReport = 'Desde_' . $_POST['desde'] . '_Hasta_' . $_POST['hasta'];
+        }else{
+            // $datos = $obj->getAllPerSol_1("solicitudes2", $tipoSol);
+            // $nameReport = 'Todos';
+            echo "<script type='text/javascript'>alert('Debe Seleccionar un rango de fecha');window.location='Registros_Solictudes.html';</script>";
+        }
+
+        if(empty($datos))
+        {
+            echo "<script type='text/javascript'>alert('No hay registros para Persona Natural');window.location='Registros_Solictudes.html';</script>";
+        }else{
+            /* Inicializamos el pluging */
+            $spreadsheet = new Spreadsheet();
+            $sheet = $spreadsheet->getActiveSheet();
+
+            /* Comenzamos a llenar el archivo */
+            $styleArray = [
+                'borders' => [
+                    'allBorders' => [
+                        'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                        'color' => ['rgb' => '000000'],
+                    ],
+                ],
+            ];
+            $spreadsheet->getActiveSheet()->getColumnDimension('A')->setWidth(6);
+            $spreadsheet->getActiveSheet()->getColumnDimension('B')->setWidth(17);
+            $spreadsheet->getActiveSheet()->getColumnDimension('C')->setWidth(17);
+            $spreadsheet->getActiveSheet()->getColumnDimension('D')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('E')->setWidth(20);
+            $spreadsheet->getActiveSheet()->getColumnDimension('F')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('G')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('H')->setWidth(12);
+            $spreadsheet->getActiveSheet()->getColumnDimension('I')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('J')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('K')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('L')->setWidth(8);
+            $spreadsheet->getActiveSheet()->getColumnDimension('M')->setWidth(12);
+            $spreadsheet->getActiveSheet()->getColumnDimension('N')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('O')->setWidth(11);
+            $spreadsheet->getActiveSheet()->getColumnDimension('P')->setWidth(11);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Q')->setWidth(25);
+            $spreadsheet->getActiveSheet()->getColumnDimension('R')->setWidth(25);
+            $spreadsheet->getActiveSheet()->getColumnDimension('S')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('T')->setWidth(20);
+            $spreadsheet->getActiveSheet()->getColumnDimension('U')->setWidth(35);
+            $spreadsheet->getActiveSheet()->getColumnDimension('V')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('W')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('X')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Y')->setWidth(15);
+            $spreadsheet->getActiveSheet()->getColumnDimension('Z')->setWidth(20);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AA')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AB')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AC')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AD')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AE')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AF')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AG')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AH')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AI')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AJ')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AK')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AL')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AM')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AN')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AO')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AP')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AQ')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AR')->setWidth(10);
+            $spreadsheet->getActiveSheet()->getColumnDimension('AS')->setWidth(10);
+
+            // TITULO CABECERA
+            $sheet->getStyle('A1:AS1')->getFont()->setBold(true);
+            $sheet->mergeCells('A1:AS1');
+            $sheet->getStyle('A1:AS1')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+            $sheet->getStyle('A1:AS1')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+            $sheet->getStyle('A1:AS1')->applyFromArray($styleArray);
+            $spreadsheet->getActiveSheet()->getStyle('A1:AS1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+            ->getStartColor()->setRGB('0070C0');
+            $spreadsheet->getActiveSheet()->getStyle('A1:AS1')->getFont()->getColor()->setRGB('FFFFFF');
+            $sheet->getStyle('A1:AS1')->getFont()->setSize(20);
+            $sheet->setCellValue('A1', 'MIEMBRO DE EMPRESA');
+            // Cabecera Archivo
+            $sheet->getStyle('A2:AS2')->getFont()->setBold(true);
+            $sheet->getStyle('A2:AS2')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+            $sheet->getStyle('A2:AS2')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+            $sheet->getStyle('A2:AS2')->applyFromArray($styleArray);
+            $spreadsheet->getActiveSheet()->getStyle('A2:AS2')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+            ->getStartColor()->setRGB('000000');
+            $spreadsheet->getActiveSheet()->getStyle('A2:AS2')->getFont()->getColor()->setRGB('FFFFFF');
+            $sheet->setCellValue('A2', 'ID');
+            $sheet->setCellValue('B2', 'FECHA INGRESO');
+            $sheet->setCellValue('C2', 'FECHA ENVIO');
+            $sheet->setCellValue('D2', 'SOLICITUD');
+            $sheet->setCellValue('E2', 'NOMBRES');
+            $sheet->setCellValue('F2', 'APELLIDO');
+            $sheet->setCellValue('G2', 'APELLIDO_2');
+            $sheet->setCellValue('H2', 'TIPO DOCUMENTO');
+            $sheet->setCellValue('I2', 'NUM DOCUMENTO');
+            $sheet->setCellValue('J2', 'CODIGO DACTILAR');
+            $sheet->setCellValue('K2', 'RUC PERSONAL');
+            $sheet->setCellValue('L2', 'SEXO');
+            $sheet->setCellValue('M2', 'FECHA NACIMIENTO');
+            $sheet->setCellValue('N2', 'NACIONALIDAD');
+            $sheet->setCellValue('O2', 'CELULAR');
+            $sheet->setCellValue('P2', 'CELULAR_2');
+            $sheet->setCellValue('Q2', 'CORREO');
+            $sheet->setCellValue('R2', 'CORREO_2');
+            $sheet->setCellValue('S2', 'EMPRESA');
+            $sheet->setCellValue('T2', 'RUC EMPRESA');
+            $sheet->setCellValue('U2', 'CARGO');
+            $sheet->setCellValue('V2', 'MOTIVO');
+            $sheet->setCellValue('W2', 'UNIDAD');
+            $sheet->setCellValue('X2', 'PROVINCIA');
+            $sheet->setCellValue('Y2', 'CIUDAD');
+            $sheet->setCellValue('Z2', 'NOMBRE RL');
+            $sheet->setCellValue('AA2', 'APELLIDO RL');
+            $sheet->setCellValue('AB2', 'TIPO DOCUMENTO RL');
+            $sheet->setCellValue('AC2', 'NUM DOCUMENTO RL');
+            $sheet->setCellValue('AD2', 'DIRECCION');
+            $sheet->setCellValue('AE2', 'VIGENCIA FIRMA');
+            $sheet->setCellValue('AF2', 'FECHA DEPOSITO');
+            $sheet->setCellValue('AG2', 'NUM DEPOSITO');
+            $sheet->setCellValue('AH2', 'NOMBRE BANCO');
+            $sheet->setCellValue('AI2', 'NOMBRE DEPOSITANTE');
+            $sheet->setCellValue('AJ2', 'ESTATUS DE PAGO');
+            $sheet->setCellValue('AK2', 'FIRMA FLASH');
+            $sheet->setCellValue('AL2', 'PARTNER');
+            $sheet->setCellValue('AM2', 'ESTATUS FIRMA');
+            $sheet->setCellValue('AN2', 'NOMBRE FACTURA');
+            $sheet->setCellValue('AO2', 'RUC FACTURA');
+            $sheet->setCellValue('AP2', 'CORREO FACTURA');
+            $sheet->setCellValue('AQ2', 'DIRECCION FACTURA');
+            $sheet->setCellValue('AR2', 'TLF FACTURA');
+            $sheet->setCellValue('AS2', 'COMENTARIOS');
+
+            $letra = 'A';
+            $num = 3;
+
+            foreach($datos as $key => $data)
+            {
+                $sheet->setCellValue('A' . $num, $data['id_solicitud']);
+                $sheet->setCellValue('B' . $num, $data['fecha_ing_firma']);
+                $sheet->setCellValue('C' . $num, $data['fecha_env_firma']);
+                $sheet->setCellValue('D' . $num, $data['tipo_solicitud']);
+                $sheet->setCellValue('E' . $num, $data['nombres']);
+                $sheet->setCellValue('F' . $num, $data['apellido1']);
+                $sheet->setCellValue('G' . $num, $data['apellido2']);
+                $sheet->setCellValue('H' . $num, $data['tipodocumento']);
+                $sheet->setCellValue('I' . $num, $data['numerodocumento']);
+                $sheet->setCellValue('J' . $num, $data['codigodactilar']);
+                $sheet->setCellValue('K' . $num, $data['ruc_personal']);
+                $sheet->setCellValue('L' . $num, $data['sexo']);
+                $sheet->setCellValue('M' . $num, $data['fecha_nacimiento']);
+                $sheet->setCellValue('N' . $num, $data['nacionalidad']);
+                $sheet->setCellValue('O' . $num, $data['telfCelular']);
+                $sheet->setCellValue('P' . $num, $data['telfCelular2']);
+                $sheet->setCellValue('Q' . $num, $data['eMail']);
+                $sheet->setCellValue('R' . $num, $data['cm3']);
+                $sheet->setCellValue('S' . $num, $data['empresa']);
+                $sheet->setCellValue('T' . $num, $data['ruc_empresa']);
+                $sheet->setCellValue('U' . $num, $data['cargo']);
+                $sheet->setCellValue('V' . $num, $data['motivo']);
+                $sheet->setCellValue('W' . $num, $data['unidad']);
+                $sheet->setCellValue('X' . $num, $data['provincia']);
+                $sheet->setCellValue('Y' . $num, $data['ciudad']);
+                $sheet->setCellValue('Z' . $num, $data['nombresRL']);
+                $sheet->setCellValue('AA' . $num, $data['apellidosRL']);
+                $sheet->setCellValue('AB' . $num, $data['tipodocumentoRL']);
+                $sheet->setCellValue('AC' . $num, $data['numerodocumentoRL']);
+                $sheet->setCellValue('AD' . $num, $data['direccion']);
+                $sheet->setCellValue('AE' . $num, $data['vigenciafirma']);
+                $sheet->setCellValue('AF' . $num, $data['fecha_deposito']);
+                $sheet->setCellValue('AG' . $num, $data['cm5']);
+                $sheet->setCellValue('AH' . $num, $data['nombre_banco']);
+                $sheet->setCellValue('AI' . $num, $data['nombre_depositante']);
+                $sheet->setCellValue('AJ' . $num, $data['cm6']);
+                $sheet->setCellValue('AK' . $num, $data['servicio_express']);
+                $sheet->setCellValue('AL' . $num, $data['nombre_partner']);
+                $sheet->setCellValue('AM' . $num, $data['statusp']);
+                $sheet->setCellValue('AN' . $num, $data['nombres_fact']);
+                $sheet->setCellValue('AO' . $num, $data['ruc_ced_fact']);
+                $sheet->setCellValue('AP' . $num, $data['correo_fact']);
+                $sheet->setCellValue('AQ' . $num, $data['direccion_fact']);
+                $sheet->setCellValue('AR' . $num, $data['telef_fact']);
+                $sheet->setCellValue('AS' . $num, $data['comentarios_fact']);
+                $num++;
+            }
+
+            /* Proceso de descargar y titulo del archivo */
+            $writer = new Xlsx($spreadsheet);
+            $filename = 'Reporte_Miembro_Empresa_' . $nameReport . '.xlsx';
+            $writer->save($filename);
+            DownloadFile($filename);
+        }
+    }
+    
+    /*public function ReportGen2()
     {
         $obj=new EntidadBase();
 
@@ -2387,8 +2803,6 @@ class RegistrosController extends ControladorBase{
             $nameReport = 'Todos';
         }
 
-        /*print_r($data);
-        exit();*/
         if(empty($data))
         {
             echo "<script type='text/javascript'>alert('No hay registros para Representante Legal');window.location='Registros_Solictudes.html';</script>";
@@ -2508,9 +2922,9 @@ class RegistrosController extends ControladorBase{
         }
        
         
-    }
+    }*/
     
-    public function ReportGen3()
+    /*public function ReportGen3()
     {
         $obj=new EntidadBase();
 
@@ -2643,7 +3057,7 @@ class RegistrosController extends ControladorBase{
         }
        
         
-    }
+    }*/
 
 }
 ?>
