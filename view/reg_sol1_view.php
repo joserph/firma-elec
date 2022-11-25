@@ -550,10 +550,10 @@
                            <span id="error_TipoDocumentoBF" class="help-block ocultar"><small>Debe seleccionar un Documento de Identidad</small></span>
                            </div>
                         </div>
-                        <div class="form-group col-md-5" id="g_cedulaBF">
+                        <div class="form-group col-md-5" id="g_cedula2">
                            <div class="col-md-12">
                            <label for="nombre">RUC / Cédula BF</label>
-                           <input type="text" name="cedulaBF" id="cedulaBF" class="form-control" maxlength=13 onblur="validarDocumento('cedulaBF')" placeholder="Ruc / Cédula en Factura">
+                           <input type="text" name="cedula2" id="cedula2" class="form-control" maxlength=13 onblur="validarDocumento('cedula2')" placeholder="Ruc / Cédula en Factura">
                            </div>
                         </div>
                         <!-- End Campos para el BLACK FRIDAY -->

@@ -142,8 +142,7 @@ class RegistrosController extends ControladorBase{
         'f_adicional3'=>$datasol['f_adicional3'],                         // PDF o JPG codificado en BASE64
         'f_adicional4'=>$datasol['f_adicional4'],                         // PDF o JPG codificado en BASE64
         'coddactilar' =>$datasol['codigodactilar'],
-        'TipoDocumentoBF' => $datasol['TipoDocumentoBF'],
-        'cedulaBF' => $datasol['cedulaBF'],
+        'cedula2' => $datasol['cedula2'],
         );
 
         $data2 = array(
@@ -183,8 +182,7 @@ class RegistrosController extends ControladorBase{
         'f_adicional3'=>$datasol['f_adicional3'],                         // PDF o JPG codificado en BASE64
         'f_adicional4'=>$datasol['f_adicional4'],                         // PDF o JPG codificado en BASE64
         'coddactilar' =>$datasol['codigodactilar'],
-        'TipoDocumentoBF' => $datasol['TipoDocumentoBF'],
-        'cedulaBF' => $datasol['cedulaBF'],
+        'cedula2' => $datasol['cedula2'],
         );
 
         $data3 = array(
@@ -232,8 +230,7 @@ class RegistrosController extends ControladorBase{
         'f_adicional3'=>$datasol['f_adicional3'],                         // PDF o JPG codificado en BASE64
         'f_adicional4'=>$datasol['f_adicional4'],                         // PDF o JPG codificado en BASE64
         'coddactilar' => $datasol['codigodactilar'],
-        'TipoDocumentoBF' => $datasol['TipoDocumentoBF'],
-        'cedulaBF' => $datasol['cedulaBF'],
+        'cedula2' => $datasol['cedula2'],
         );
 
         $url = 'https://api.uanataca.ec/v4/solicitud';
@@ -1216,7 +1213,7 @@ class RegistrosController extends ControladorBase{
         'nombre_banco',
         'nombre_depositante',
         'TipoDocumentoBF',
-        'cedulaBF');
+        'cedula2');
 
 
         $values = array($_POST['tipo_solicitud'],
@@ -1285,7 +1282,7 @@ class RegistrosController extends ControladorBase{
         $_POST['nombre_banco'],
         $_POST['nombre_depositante'],
         $_POST['TipoDocumentoBF'],
-        $_POST['cedulaBF']);
+        $_POST['cedula2']);
 
         $obj=new EntidadBase();
         /*print_r($_POST);
