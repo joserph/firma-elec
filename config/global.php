@@ -1,8 +1,8 @@
 <?php
 define("CONTROLADOR_DEFECTO", "Usuarios");
 define("ACCION_DEFECTO", "index");
-define("APIKEY","ssuh4367@fksavnsd64khHGKfvf732u.ykfHKGVhgkc");
-define("UID", "25");
+define("APIKEY","hSD73nV6jhk8dg2JHgcjl@fqxj8WjeOFCPAjhekL7sn3");
+define("UID", "797979");
 
 
 function cellColor($objPHPExcel,$cells,$color){

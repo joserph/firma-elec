@@ -567,7 +567,33 @@
                            <input type="text" name="nombre_partner" value="<?php echo $datos['nombre_partner']; ?>" id="nombre_partner" class="form-control" maxlength=13 placeholder="Nombre y Apellido del Partner">
                            </div>
                         </div>
+                        <!-- Campos para el BLACK FRIDAY -->
+                        <div class="col-md-12">
+                              <p><h3><strong>BLACK FRIDAY</strong></h3></p>
+                              <blockquote>
+                              <p>Ofrece a tu cliente nuestra promo 2x1... y coloca la cédula de la segunda firma asociada en este campo, la cual no será facturada. Puede ser un familiar, amigo o conocido del titular de la primera firma.</p>
+                              </blockquote>
+                              <hr>
+                        </div>
+                        <div class="form-group col-md-4" id="g_TipoDocumentoBF">
+                           <div class="col-md-12">
+                           <label for="nombre">Documento de Identidad BF</label>
+                           <select class="form-control" name="TipoDocumentoBF" >
+                              <option value="">Seleccione Identidad</option>
+                              <option value="CEDULA" <?php if($datos['TipoDocumentoBF'] == "CEDULA") echo 'selected="selected"'; ?>>CEDULA</option>
+                              <option value="PASAPORTE" <?php if($datos['TipoDocumentoBF'] == "PASAPORTE") echo 'selected="selected"'; ?>>PASAPORTE</option>
+                           </select>
+                           <span id="error_TipoDocumentoBF" class="help-block ocultar"><small>Debe seleccionar un Documento de Identidad</small></span>
+                           </div>
+                        </div>
+                        <div class="form-group col-md-5" id="g_cedulaBF">
+                           <div class="col-md-12">
+                           <label for="nombre">RUC / Cédula BF</label>
+                           <input type="text" name="cedulaBF" value="<?php echo $datos['cedulaBF']; ?>" id="cedulaBF" class="form-control" maxlength=13 onblur="validarDocumento('cedulaBF')" placeholder="Ruc / Cédula en Factura">
+                           </div>
+                        </div>
                         
+                        <!-- End Campos para el BLACK FRIDAY -->
                         
                         <div class="form-group col-md-4" id="g_ruc_ced_fact">
                            <div class="col-md-12">

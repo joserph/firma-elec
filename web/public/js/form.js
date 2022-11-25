@@ -21,14 +21,14 @@ $(document).ready(function () {
     });
 
     allNextBtn.click(function(){
-        var curStep = $(this).closest(".setup-content"),
+        var curStep = $(this).closest(".setup-content")
             curStepBtn = curStep.attr("id"),
             nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
             curInputs = curStep.find("input[type='text'],input[type='url']"),
             curInputs2 = curStep.find("textarea"),
             curInputs3 = curStep.find("select"),
             isValid = true;
-
+        //console.log(curInputs)
         $(".form-group").removeClass("has-error");
         for(var i=0; i<curInputs.length; i++){
             if (!curInputs[i].validity.valid){
